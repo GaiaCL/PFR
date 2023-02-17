@@ -1,3 +1,5 @@
+<?php $title ="Catégories";?>
+<?php ob_start(); ?>
 <div class="container">
     <h1 style="margin-top: 5em;box-shadow:none;">Categories</h1>
     <div class="row d-flex justify-content-center" style="margin-top:5em;">
@@ -21,3 +23,6 @@
     </div>
     </div>
 </div>
+<?php $content = ob_get_clean(); 
+require('layoutAdmin.php');
+?>

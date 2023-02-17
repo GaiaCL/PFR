@@ -1,4 +1,4 @@
-<?php require('../src/model/login.php'); ?>
+<?php $title = "Login Admin"?>
 <?php ob_start(); ?>
   <form class="box" action="" method="post" name="login">
 
@@ -9,4 +9,6 @@
 </label>
         <input type="submit" value="Connexion " name="submit" class="box-button">
 </form>
-<?php $content = ob_get_clean(); ?>
+<?php $content = ob_get_clean(); 
+require('layoutLogin.php');
+?>
