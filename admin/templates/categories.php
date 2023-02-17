@@ -8,7 +8,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Gestion des Categories</h5>
             <p class="card-text">Vous pourrez en choisissant cette option gérer toutes les catégories de la boutique en ligne Magic Box.</p>
-            <a href="index.php?action=gestionCat" class="btn btn-primary">Gérer</a>
+            <a href="index.php?page=manageCat" class="btn btn-primary">Gérer</a>
         </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Ajouter une Categorie</h5>
             <p class="card-text">Vous pourrez en choisissant cette option ajouter de nouvelles catégories pour la boutique en ligne Magic Box.</p>
-            <a href="index.php?action=addCat" class="btn btn-primary">Ajouter</a>
+            <a href="index.php?page=addCat" class="btn btn-primary">Ajouter</a>
         </div>
         </div>
     </div>

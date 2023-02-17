@@ -8,7 +8,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Gestion des Produits</h5>
             <p class="card-text">Vous pourrez en choisissant cette option gérer tous les produits de la boutique en ligne Magic Box.</p>
-            <a href="index.php?action=gestionProduits" class="btn btn-primary">Gérer</a>
+            <a href="index.php?page=gestionProduits" class="btn btn-primary">Gérer</a>
         </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Ajouter un produit</h5>
             <p class="card-text">Vous pourrez en choisissant cette option ajouter de nouveaux produits pour la boutique en ligne Magic Box.</p>
-            <a href="index.php?action=addProduits" class="btn btn-primary">Ajouter</a>
+            <a href="index.php?page=addProduits" class="btn btn-primary">Ajouter</a>
         </div>
         </div>
     </div>

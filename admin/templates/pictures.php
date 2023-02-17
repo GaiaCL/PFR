@@ -8,7 +8,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Gestion des Images</h5>
             <p class="card-text">Vous pourrez en choisissant cette option gérer toutes les images de la boutique en ligne Magic Box.</p>
-            <a href="index.php?action=gestionImages" class="btn btn-primary">Gérer</a>
+            <a href="index.php?page=gestionImages" class="btn btn-primary">Gérer</a>
         </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Ajouter une Image</h5>
             <p class="card-text">Vous pourrez en choisissant cette option ajouter de nouvelles images pour la boutique en ligne Magic Box.</p>
-            <a href="index.php?action=addImages" class="btn btn-primary">Ajouter</a>
+            <a href="index.php?page=addImages" class="btn btn-primary">Ajouter</a>
         </div>
         </div>
     </div>

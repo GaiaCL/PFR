@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
        if(($user['username'] == $username) && (password_verify($password, $user['password'])) ){
               $_SESSION['username'] = $username;
-               header("location: index.php?page=acceuilAdmin");
+               header("location: index.php?page=homeAdmin");
        }
        else {
            echo "<script language='javascript'>";
