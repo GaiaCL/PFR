@@ -15,7 +15,7 @@ ob_start();
                     }
                     ?>
                     </select>
-        <input type="submit" name="valider">
+        <input type="submit" name="valider" value="Ajouter">
     </form> 
     <?php $content = ob_get_clean();
     require('layoutAdmin.php');

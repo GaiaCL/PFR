@@ -18,8 +18,8 @@
             <td><?= $product['name'] ?></td>
             <td><?= $product['description'] ?></td>
             <td>$<?= $product['price'] ?></td>              
-            <td id="modif">  <div id="modif1"><a href="index.php?action=modificationProduits&id=<?php echo $product['id']?>" style="background-color:black;padding:0.3em;color:white;border-radius:1em;">Modifier</a>  
-            <a href="index.php?action=gestionProduits&id= <?php echo $product['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" style="background-color:black;padding:0.3em;color:white;border-radius:1em;">Supprimer</a><div></td>
+            <td id="modif">  <div id="modif1"><a href="index.php?page=modificationProducts&id=<?php echo $product['id']?>" style="background-color:black;padding:0.3em;color:white;border-radius:1em;">Modifier</a>  
+            <a href="index.php?page=manageProducts&id= <?php echo $product['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" style="background-color:black;padding:0.3em;color:white;border-radius:1em;">Supprimer</a><div></td>
             </tr>
             <?php
         }
