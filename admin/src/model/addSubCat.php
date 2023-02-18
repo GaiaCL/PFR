@@ -1,6 +1,6 @@
 <?php 
 $sqlQuery = 'SELECT * FROM `categories`';
-$SCStatement = $db->prepare($sqlQuery);
+$SCStatement = dbConnect()->prepare($sqlQuery);
 $SCStatement->execute();
 $SCs = $SCStatement->fetchAll();
 
@@ -12,7 +12,7 @@ if (isset($_POST['nom'],$_POST['description'], $_POST['categorie'])) {
     $query = "INSERT into `sub_categories` (name, description, id_categorie)
           VALUES (:name, :description, :id_categorie)";
     // Exécuter la requête sur la base de données
-    $req = $db->prepare($query);
+    $req = dbConnect()->prepare($query);
     $req->bindValue(':name', $name, PDO::PARAM_STR);
     $req->bindValue(':description', $description, PDO::PARAM_STR);
     $req->bindValue(':id_categorie', $idCat, PDO::PARAM_INT);

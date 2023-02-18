@@ -1,13 +1,13 @@
 <?php
 $sqlQuerySC = 'SELECT * FROM `categories`';
-$SCStatement = $db->prepare($sqlQuerySC);
+$SCStatement = dbConnect()->prepare($sqlQuerySC);
 $SCStatement->execute();
 $SCs = $SCStatement->fetchAll();
 
 if (isset($_GET['id'])){
     $id = intval($_GET['id']);
     $sql = "SELECT*FROM sub_categories WHERE id = :id";
-    $idsStatement = $db->prepare($sql);
+    $idsStatement = dbConnect()->prepare($sql);
     $idsStatement->bindValue(':id', $id, PDO::PARAM_INT);
     $idsStatement->execute();
     $res = $idsStatement->fetch();
@@ -19,7 +19,7 @@ if (isset($_GET['id'])){
         $idCatUpdate = strip_tags($_POST['categories']);
         if(isset($_POST['valider'])){
             $query = 'UPDATE sub_categories SET name = :name, description = :description, id_categorie = :id_categorie WHERE id = :id';
-            $idsStatement = $db->prepare($query);
+            $idsStatement = dbConnect()->prepare($query);
             $idsStatement->bindValue(':id', $id, PDO::PARAM_INT); 
             $idsStatement->bindValue(':name', $nameUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':description', $descriptionUpdate, PDO::PARAM_STR);

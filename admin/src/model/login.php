@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    $username = strip_tags($_POST["username"]);
    $password = strip_tags($_POST["password"]);
-   $stmt = $db->prepare('SELECT * FROM `admin` WHERE username = :username');
+   $stmt = dbConnect()->prepare('SELECT * FROM `admin` WHERE username = :username');
    $stmt->bindValue(":username", $username, PDO::PARAM_STR);
    $stmt->execute();
    $user = $stmt->fetch();

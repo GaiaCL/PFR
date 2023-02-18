@@ -5,7 +5,7 @@ if(isset($_GET['type'])) {
     if($types == 'colors'){
         $catSpecs = "Couleurs";
         $sqlQuery = 'SELECT * FROM `colors`';
-        $SCStatement = $db->prepare($sqlQuery);
+        $SCStatement = dbConnect()->prepare($sqlQuery);
         $SCStatement->execute();
         $SCs = $SCStatement->fetchAll();
 
@@ -15,7 +15,7 @@ if(isset($_GET['type'])) {
             $query = "INSERT into `colors` (type)
                 VALUES (:type)";
             // Exécuter la requête sur la base de données
-            $req = $db->prepare($query);
+            $req = dbConnect()->prepare($query);
             $req->bindValue(':type', $typ, PDO::PARAM_STR);
             $req->execute();
             $msg= "Couleur ajoutée avec succès !";
@@ -27,7 +27,7 @@ if(isset($_GET['type'])) {
     else if($types == 'sizes'){
         $catSpecs = "Tailles";
         $sqlQuery = 'SELECT * FROM `size`';
-        $SCStatement = $db->prepare($sqlQuery);
+        $SCStatement = dbConnect()->prepare($sqlQuery);
         $SCStatement->execute();
         $SCs = $SCStatement->fetchAll();
 
@@ -37,7 +37,7 @@ if(isset($_GET['type'])) {
             $query = "INSERT into `size` (type)
                 VALUES (:type)";
             // Exécuter la requête sur la base de données
-            $req = $db->prepare($query);
+            $req = dbConnect()->prepare($query);
             $req->bindValue(':type', $typ, PDO::PARAM_STR);
             $req->execute();
             $msg= "Taille ajoutée avec succès !";

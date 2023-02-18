@@ -6,7 +6,7 @@ if (isset($_POST['nom'],$_POST['description'])) {
     $query = "INSERT into `categories` (name, description)
           VALUES (:name, :description)";
     // Exécuter la requête sur la base de données
-    $req = $db->prepare($query);
+    $req = dbConnect()->prepare($query);
     $req->bindValue(':name', $name, PDO::PARAM_STR);
     $req->bindValue(':description', $description, PDO::PARAM_STR);
     $req->execute();

@@ -13,7 +13,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
             $description = strip_tags($_POST['description']);
             $msgSend = "L'envoi a bien été effectué !";
              $query = 'INSERT INTO pictures(name,description,path) VALUES (:name,:description,:path)';
-            $req = $db->prepare($query);
+            $req = dbConnect()->prepare($query);
             $req->bindValue(':name', basename($_FILES['image']['name']), PDO::PARAM_STR);
             $req->bindValue(':description', $description, PDO::PARAM_STR);
             $req->bindValue(':path',$screenshot , PDO::PARAM_STR);
