@@ -104,6 +104,5 @@ if(!isset($_SESSION['username'])){
         }
         else{
             require('../src/controllers/login.php');
-            login();
             }
         }
