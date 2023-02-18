@@ -1,27 +1,17 @@
 <?php
-    if(isset($_GET['id'])){
-    $subCatID = $_GET['id'];
-    $reqDelete = 'DELETE FROM `sub_categories` WHERE id = :id';
-    $adminDelete = dbConnect()->prepare($reqDelete);
-    $adminDelete->bindValue(':id', $subCatID, PDO::PARAM_INT);
-    $adminDelete ->execute();
- }
-if(isset($_GET['pagenb']) && !empty($_GET['pagenb'])){
-    $currentPage = (int) strip_tags($_GET['pagenb']);
-}else{
-    $currentPage = 1;
+    function deleteSubCategorie() {
+        if(isset($_GET['id'])){
+        $catID = $_GET['id'];
+        $reqDelete = 'DELETE FROM `sub_categories` WHERE id = :id';
+        $adminDelete = dbconnect()->prepare($reqDelete);
+        $adminDelete->bindValue(':id', $catID, PDO::PARAM_INT);
+        $adminDelete ->execute();
+    }
 }
-$sql = 'SELECT COUNT(*) AS nb_subcat FROM `sub_categories`;';
-$query = dbConnect()->prepare($sql);
-$query->execute();
-$result = $query->fetch();
-$nbSubCat = (int) $result['nb_subcat'];
-$parPage = 10;
-$pages = ceil($nbSubCat / $parPage);
-$premier = ($currentPage * $parPage) - $parPage;
-$sql = 'SELECT * FROM `sub_categories`  LIMIT :premier, :parpage;';
-$query = dbConnect()->prepare($sql);
-$query->bindValue(':premier', $premier, PDO::PARAM_INT);
-$query->bindValue(':parpage', $parPage, PDO::PARAM_INT);
-$query->execute();
-$subCategories = $query->fetchAll(PDO::FETCH_ASSOC);
+function requestSubCategorieManagement() {
+    $sql = 'SELECT*FROM `sub_categories`';
+    $query = dbconnect()->prepare($sql);
+    $query->execute();
+    $subCategories = $query->fetchAll(PDO::FETCH_ASSOC);
+    return $subCategories;
+    }

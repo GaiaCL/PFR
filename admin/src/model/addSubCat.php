@@ -1,9 +1,12 @@
 <?php 
+function selectCat(){
 $sqlQuery = 'SELECT * FROM `categories`';
 $SCStatement = dbConnect()->prepare($sqlQuery);
 $SCStatement->execute();
 $SCs = $SCStatement->fetchAll();
-
+return $SCs;
+}
+function insertSubCategorie(){
 $req="";
 if (isset($_POST['nom'],$_POST['description'], $_POST['categorie'])) {
     $name = stripslashes($_POST['nom']);
@@ -22,4 +25,5 @@ if (isset($_POST['nom'],$_POST['description'], $_POST['categorie'])) {
 else if (!isset($_POST['nom']) || !isset($_POST['description']) || !isset($_POST['categorie']) ) {
     $msg= "";
 }
-
+return $msg;
+}

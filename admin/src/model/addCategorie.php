@@ -1,4 +1,5 @@
 <?php 
+function insertCategorie() {
 $req="";
 if (isset($_POST['nom'],$_POST['description'])) {
     $name = stripslashes($_POST['nom']);
@@ -15,4 +16,5 @@ if (isset($_POST['nom'],$_POST['description'])) {
 else if (!isset($_POST['nom']) || !isset($_POST['nom'])) {
     $msg= "";
 }
-
+return $msg;
+}

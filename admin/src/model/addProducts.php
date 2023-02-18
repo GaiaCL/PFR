@@ -1,9 +1,12 @@
-<?php 
+<?php
+function selectSubCat(){
 $sqlQuery = 'SELECT * FROM `sub_categories`';
 $SCStatement = dbConnect()->prepare($sqlQuery);
 $SCStatement->execute();
 $SCs = $SCStatement->fetchAll();
-
+return $SCs;
+}
+function insertProducts(){
 $req="";
 if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts'], $_POST['subCategorie'])) {
     $nameProducts = stripslashes($_POST['nameProducts']);
@@ -25,4 +28,6 @@ if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts']
 }
 else if (!isset($_POST['nameProducts']) || !isset($_POST['descProducts']) || !isset($_POST['priceProducts']) || !isset($_POST['subCategorie']) ) {
     $msg= "";
+}
+return $msg;
 }

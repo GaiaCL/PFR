@@ -1,5 +1,5 @@
-<?php
-require('../src/model/addProduitsVerif.php');
+<?php $title = 'Ajout Produits';
+ob_start();
 ?>
     <h1 style="box-shadow:none;">Ajouter un Produit</h1>
     <form method="POST" action="">
@@ -17,3 +17,6 @@ require('../src/model/addProduitsVerif.php');
                     </select>
         <input type="submit" name="valider">
     </form> 
+    <?php $content = ob_get_clean();
+    require('layoutAdmin.php');
+    ?>

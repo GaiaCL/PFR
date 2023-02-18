@@ -1,4 +1,5 @@
 <?php 
+function insertPictures() {
 $msgSend="";
 if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['description'])) {
     if ($_FILES['image']['size'] <= 1000000) {
@@ -22,3 +23,8 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
      
             $req->execute();
         }}}
+    else {
+        $msgSend ='';
+    }
+    return $msgSend;
+    }

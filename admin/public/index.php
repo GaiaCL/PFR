@@ -48,15 +48,15 @@ if(!isset($_SESSION['username'])){
         }
     else if($page == 'manageSubCat'){
     require('../src/controllers/manageSubCat.php');
-    manageSubCat();
+    manageSubCategorie();
     }
     else if($page == 'addSubCat'){
     require('../src/controllers/addSubCat.php');
-    addSubCat();
+    addSubCategorie();
     }
     else if($page == 'modificationSubCat'){
     require('../src/controllers/modificationSubCat.php');
-    modSubCat();
+    modSubCategorie();
     }
     else if($page == 'managePictures'){
     require('../src/controllers/managePictures.php');
@@ -71,37 +71,37 @@ if(!isset($_SESSION['username'])){
     modPictures();
     }
     else if($page == 'manageProducts'){
-    require('../src/controllers/manageproducts.php');
+    require('../src/controllers/manageProducts.php');
     manageProducts();
     }
-    else if($page == 'addproducts'){
-    require('../src/controllers/addproducts.php');
+    else if($page == 'addProducts'){
+    require('../src/controllers/addProducts.php');
     addProducts();
     }
-    else if($page == 'modificationproducts'){
-    require('../src/controllers/modificationproducts.php');
+    else if($page == 'modificationProducts'){
+    require('../src/controllers/modificationProducts.php');
     modProducts();
     }
-    else if($page == 'manageSpecs'){
+    else if($page == 'manageSpecsColors'){
     require('../src/controllers/manageSpecs.php');
-    manageSpecs();
+    manageColorsSpecs();
     }
-    else if($page == 'addSpecs'){
+    else if($page == 'manageSpecsSizes'){
+    require('../src/controllers/manageSpecs.php');
+    manageSizesSpecs();
+    }
+    else if($page == 'addSpecsColors'){
     require('../src/controllers/addSpecs.php');
-    addSpecs();
+    addSpecsColors();
+    }
+    else if($page == 'addSpecsSizes'){
+    require('../src/controllers/addSpecs.php');
+    addSpecsSizes();
     }
     else if($page == 'modificationSpecs'){
     require('../src/controllers/modificationSpecs.php');
     modSpecs();
     }
-    else if($page == 'specsSizes'){
-    require('../src/controllers/specsSizes.php');
-    specsSize();
-    }
-    else if($page == 'specsColors'){
-    require('../src/controllers/specsColors.php');
-    specsSize();
-        }
         else{
             require('../src/controllers/login.php');
             login();

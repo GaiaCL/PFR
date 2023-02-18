@@ -1,7 +1,7 @@
-<?php
-require('../src/model/addSubCatVerif.php');
-?>
-    <h1 style="box-shadow:none;">Ajouter une Sous-Catégorie</h1>
+ <?php $title ='Ajout Sous-Catégorie';?>
+ <?php ob_start(); ?>  
+   
+   <h1 style="box-shadow:none;">Ajouter une Sous-Catégorie</h1>
     <form method="POST" action="">
         <?= $msg?>
         <label>Nom de la Sous-Catégorie : </label><input type="text" name="nom">
@@ -14,5 +14,8 @@ require('../src/model/addSubCatVerif.php');
                     }
                     ?>
                     </select>
-        <input type="submit" name="valider">
+        <input type="submit" name="valider" value="Ajouter">
     </form> 
+<?php $content = ob_get_clean();
+require('layoutAdmin.php');
+?>

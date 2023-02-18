@@ -8,7 +8,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Gestion des Specifications</h5>
             <p class="card-text">Vous pourrez en choisissant cette option gérer toutes les specs de la boutique en ligne Magic Box.</p>
-            <a href="index.php?page=specsColors" class="btn btn-primary me-4">Colors</a><a href="index.php?page=specsSizes" class="btn btn-primary">Sizes</a>
+            <a href="index.php?page=manageSpecsColors" class="btn btn-primary me-4">Couleurs</a><a href="index.php?page=manageSpecsSizes" class="btn btn-primary">Tailles</a>
         </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="card-body text-center">
             <h5 class="card-title">Ajouter une Specification</h5>
             <p class="card-text">Vous pourrez en choisissant cette option ajouter de nouvelles specs pour la boutique en ligne Magic Box.</p>
-            <a href="index.php?page=addSpecs&type=colors" class="btn btn-primary me-4">Colors</a> <a href="index.php?page=addSpecs&type=sizes" class="btn btn-primary">Sizes</a>
+            <a href="index.php?page=addSpecsColors" class="btn btn-primary me-4">Couleurs</a> <a href="index.php?page=addSpecsSizes" class="btn btn-primary">Tailles</a>
         </div>
         </div>
     </div>

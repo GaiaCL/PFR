@@ -18,7 +18,7 @@
 </body>
 <div class="l-navbar" id="nav-bar" style="background-color:black;">
         <nav class="nav">
-            <div> <a href="index.php?page=acceuilAdmin" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">ADMIN</span> </a>
+            <div> <a href="index.php?page=homeAdmin" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">ADMIN</span> </a>
                 <div class="nav_list"> 
                 <a href="index.php?page=categories" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Categories</span> </a> 
                 <a href="index.php?page=subcategories" class="nav_link"> <i class='bx bxs-grid-alt nav_icon'></i> <span class="nav_name">Sous_Categories</span> </a> 

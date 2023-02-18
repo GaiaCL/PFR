@@ -1,14 +1,5 @@
 <?php 
-if(isset($_GET['type'])) {
-    $types = strval($_GET['type']);
-    
-    if($types == 'colors'){
-        $catSpecs = "Couleurs";
-        $sqlQuery = 'SELECT * FROM `colors`';
-        $SCStatement = dbConnect()->prepare($sqlQuery);
-        $SCStatement->execute();
-        $SCs = $SCStatement->fetchAll();
-
+        function insertColors(){
         $req="";
         if (isset($_POST['type'])) {
             $typ = stripslashes($_POST['type']);
@@ -23,14 +14,9 @@ if(isset($_GET['type'])) {
         else if (!isset($_POST['type'])) {
             $msg= "";
         }
+        return $msg;
     }
-    else if($types == 'sizes'){
-        $catSpecs = "Tailles";
-        $sqlQuery = 'SELECT * FROM `size`';
-        $SCStatement = dbConnect()->prepare($sqlQuery);
-        $SCStatement->execute();
-        $SCs = $SCStatement->fetchAll();
-
+    function insertSizes(){
         $req="";
         if (isset($_POST['type'])) {
             $typ = stripslashes($_POST['type']);
@@ -45,5 +31,5 @@ if(isset($_GET['type'])) {
         else if (!isset($_POST['type'])) {
             $msg= "";
         }
+        return $msg;
     }
-}
