@@ -1,4 +1,5 @@
 <?php
+function selectModifCat(){
 if (isset($_GET['id'])){
     $id = intval($_GET['id']);
     $sql = "SELECT*FROM categories WHERE id = :id";
@@ -18,7 +19,10 @@ if (isset($_GET['id'])){
             $idsStatement->bindValue(':name', $nomUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':description', $descriptionUpdate, PDO::PARAM_STR);
             $idsStatement->execute();
-            header("location:index.php?action=gestionCat");
+            header("location:index.php?page
+            =manageCat");
         }
     }
+}
+return [$nomCat,$descriptionCat];
 }

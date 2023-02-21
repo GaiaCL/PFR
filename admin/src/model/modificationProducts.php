@@ -1,9 +1,13 @@
 <?php
+function selectSubCat(){
 $sqlQuerySC = 'SELECT * FROM `sub_categories`';
 $SCStatement = dbConnect()->prepare($sqlQuerySC);
 $SCStatement->execute();
 $SCs = $SCStatement->fetchAll();
+return $SCs;
+}
 
+function selectModifProducts() {
 if (isset($_GET['id'])){
     $id = intval($_GET['id']);
     $sql = "SELECT*FROM products WHERE id = :id";
@@ -28,7 +32,9 @@ if (isset($_GET['id'])){
             $idsStatement->bindValue(':price', $priceProductsUpdate);
             $idsStatement->bindValue(':id_sub_categories', $idSubCatUpdate, PDO::PARAM_STR);
             $idsStatement->execute();
-            header("location:index.php?action=gestionProduits");
+            header("location:index.php?page=manageProducts");
         }
     }
+}
+return [$nameProducts, $descriptionProducts, $priceProducts];
 }

@@ -1,9 +1,14 @@
 <?php
+function selectCat(){
+
 $sqlQuerySC = 'SELECT * FROM `categories`';
 $SCStatement = dbConnect()->prepare($sqlQuerySC);
 $SCStatement->execute();
 $SCs = $SCStatement->fetchAll();
+return $SCs;
+}
 
+function selectModifSubCat(){
 if (isset($_GET['id'])){
     $id = intval($_GET['id']);
     $sql = "SELECT*FROM sub_categories WHERE id = :id";
@@ -25,7 +30,9 @@ if (isset($_GET['id'])){
             $idsStatement->bindValue(':description', $descriptionUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':id_categorie', $idCatUpdate, PDO::PARAM_STR);
             $idsStatement->execute();
-            header("location:index.php?action=gestionSubCat");
+            header("location:index.php?page=manageSubCat");
         }
     }
+}
+return [$nameSubCat, $descriptionSubCat];
 }

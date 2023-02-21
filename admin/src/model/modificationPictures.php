@@ -1,5 +1,5 @@
 <?php
-
+function selectModifPictures() {
 if (isset($_GET['id'])){
     $id = intval($_GET['id']);
     $sql = "SELECT*FROM pictures WHERE id = :id";
@@ -22,8 +22,9 @@ if (isset($_GET['id'])){
             $idsStatement->bindValue(':path', $pathPicsUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':description', $descriptionPicsUpdate, PDO::PARAM_STR);
             $idsStatement->execute();
-            header("location:index.php?action=gestionImages");
+            header("location:index.php?page=managePictures");
         }
     }
 }
-    
+return [$namePics, $pathPics, $descriptionPics];
+}    

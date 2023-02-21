@@ -1,9 +1,5 @@
 <?php 
-    if(isset($_GET['type']))
-    {
-        $type = strval($_GET['type']);
-        if ( $action == 'modificationSpecs' && $type == 'color'){
-
+function selectModifColors(){
             if (isset($_GET['id'])){
                 $id = intval($_GET['id']);
                 $sql = "SELECT*FROM colors WHERE id = :id";
@@ -22,12 +18,14 @@
                         $idsStatement->bindValue(':type', $typeUpdate, PDO::PARAM_STR);
                         $idsStatement->bindValue(':is_enabled', $dispoUpdate, PDO::PARAM_STR);
                         $idsStatement->execute();
-                        header("location:index.php?action=specsColors");
+                        header("location:index.php?page=manageSpecsColors");
                     }
                 }
             }
-        }
-        else if ($action == 'modificationSpecs'  && $type == 'size'){
+            return $typeSpecs;
+}
+
+function selectModifSizes(){
             if (isset($_GET['id'])){
                 $id = intval($_GET['id']);
                 $sql = "SELECT*FROM size WHERE id = :id";
@@ -46,10 +44,10 @@
                         $idsStatement->bindValue(':type', $typeUpdate, PDO::PARAM_STR);
                         $idsStatement->bindValue(':is_enabled', $dispoUpdate, PDO::PARAM_STR);
                         $idsStatement->execute();
-                        header("location:index.php?action=specsSizes");
+                        header("location:index.php?page=manageSpecsSizes");
                     }
                 }
             }
-
-        }
-    }
+            return $typeSpecs;
+}
+    

@@ -98,10 +98,14 @@ if(!isset($_SESSION['username'])){
     require('../src/controllers/addSpecs.php');
     addSpecsSizes();
     }
-    else if($page == 'modificationSpecs'){
+    else if($page == 'modificationSpecsColors'){
     require('../src/controllers/modificationSpecs.php');
-    modSpecs();
+    modifColorsSpecs();
     }
+    else if($page == 'modificationSpecsSizes'){
+        require('../src/controllers/modificationSpecs.php');
+        modifSizesSpecs();
+        }
         else{
             require('../src/controllers/login.php');
             login();
