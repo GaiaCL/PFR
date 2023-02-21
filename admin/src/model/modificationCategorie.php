@@ -19,8 +19,7 @@ if (isset($_GET['id'])){
             $idsStatement->bindValue(':name', $nomUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':description', $descriptionUpdate, PDO::PARAM_STR);
             $idsStatement->execute();
-            header("location:index.php?page
-            =manageCat");
+            header("location:index.php?page=manageCat");
         }
     }
 }

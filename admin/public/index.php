@@ -103,9 +103,9 @@ if(!isset($_SESSION['username'])){
     modifColorsSpecs();
     }
     else if($page == 'modificationSpecsSizes'){
-        require('../src/controllers/modificationSpecs.php');
-        modifSizesSpecs();
-        }
+    require('../src/controllers/modificationSpecs.php');
+    modifSizesSpecs();
+    }
         else{
             require('../src/controllers/login.php');
             login();

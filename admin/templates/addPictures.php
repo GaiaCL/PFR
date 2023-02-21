@@ -5,6 +5,14 @@
         <?= $msgSend ?>
         <input type="file" name="image">
         <label>Description de l'image :</label><textarea name="description" style="width:30em; height:10em;"></textarea>
+        <select class="form-select m-4" name="subCategorie">
+                    <option selected ="true" disabled ='disabled'>Choisissez le produit</option>
+                    <?php
+                    foreach($products as $product){
+                        echo "<option name='products' value = ".$product['id'].'>'.$product['name'] ."</option>" ;
+                    }
+                    ?>
+        </select>
         <input type="submit" name="envoyer" value="Ajouter">
     </form>
 <?php $content = ob_get_clean();

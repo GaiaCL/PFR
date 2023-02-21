@@ -24,7 +24,8 @@
                 <a href="index.php?page=subcategories" class="nav_link"> <i class='bx bxs-grid-alt nav_icon'></i> <span class="nav_name">Sous_Categories</span> </a> 
                 <a href="index.php?page=pics" class="nav_link"> <i class='bx bx-image-alt nav_icon'></i> <span class="nav_name">Images</span> </a> 
                 <a href="index.php?page=products" class="nav_link"> <i class='bx bxs-shopping-bags nav_icon'></i> <span class="nav_name">Produits</span> </a> 
-                <a href="index.php?page=specs" class="nav_link"> <i class='bx bxs-objects-horizontal-right nav_icon' ></i> <span class="nav_name">Specs</span> </a> 
+                <a href="index.php?page=specs" class="nav_link"> <i class='bx bxs-objects-horizontal-right nav_icon' ></i> <span class="nav_name">Specs</span> </a>
+                 
             </div>
             </div> <a href="index.php?page=logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>

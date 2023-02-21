@@ -4,6 +4,7 @@
     <form method = "post" action ="#" enctype="multipart/form-data">
     <?= $msg ?>
         <label>Type de la specs : </label><input type="text" name="type">
+        <label class="mt-2">Disponibilité : </label><input type="checkbox" name="isEnabled">
                     <input type="submit" id="valide" name="valider" value="Ajouter">
     </form>
 <?php $content = ob_get_clean();

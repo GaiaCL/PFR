@@ -15,6 +15,24 @@ ob_start();
                     }
                     ?>
                     </select>
+                    
+                    <label class="mb-2">Couleurs : </label>
+                    <div class="d-flex align-items-center ">
+                    <?php
+                    foreach($colors as $color){
+                        echo "<input type='checkbox' value=".$color['id']." name ='checkboxColor[]'>".$color['type']."</input>" ;
+                    }
+                    ?>
+                    </div>
+                    <label class="mt-2">Tailles : </label>
+                    <div class="d-flex align-items-center">
+                    <?php
+                    foreach($sizes as $size){
+                        echo "<input type='checkbox' value=".$size['id']." name ='checkboxSize[]'>".$size['type']."</input>" ;
+                    }
+                    ?>
+                    </div>
+                    <label class="mt-2">Disponibilité : </label><input type="checkbox" name="isEnabled">
         <input type="submit" name="valider" value="Ajouter">
     </form> 
     <?php $content = ob_get_clean();

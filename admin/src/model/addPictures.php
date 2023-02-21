@@ -25,6 +25,37 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
         }}}
     else {
         $msgSend ='';
+        $screenshot ='';
     }
-    return $msgSend;
+    return [$msgSend, $screenshot];
     }
+    function selectProducts(){
+        $sqlQuery = 'SELECT * FROM `products`';
+        $ProdStatement = dbConnect()->prepare($sqlQuery);
+        $ProdStatement->execute();
+        $Products = $ProdStatement->fetchAll();
+        return $Products;
+    }
+    function selectPicture($path){
+        $query = "SELECT id FROM `pictures` WHERE path = :path";
+        $req = dbConnect()->prepare($query);
+        $req->bindValue(':path', $path, PDO::PARAM_INT);
+        $req->execute();
+        $idPicture = $req-> fetch();
+        return $idPicture[0];   
+    }
+
+    function insertIllustrateTable($idPicture){
+            $selectProducts = $_POST['products'];    
+                    $querySec = "INSERT INTO `illustrate_products` (id_products, id_pictures)
+                    VALUES (:id_products, :id_pictures)";
+                    $reqs = dbConnect()->prepare($querySec);
+                    $reqs->bindValue(':id_pictures', $idPicture, PDO::PARAM_INT);
+                    $reqs->bindValue(':id_products', $selectProducts, PDO::PARAM_INT);
+                    $reqs->execute();
+                
+               
+            }
+        
+    
+   

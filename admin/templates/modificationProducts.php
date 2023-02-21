@@ -13,6 +13,11 @@ ob_start(); ?>
                     }
                     ?>
                     </select>
+                    <?php if ($fourthMod == true){
+                    echo '<label class="mt-2">Disponibilité : </label><input type="checkbox" name="isEnabled" checked>';
+                    }else if ($fourthMod == false) {
+                    echo '<label class="mt-2">Disponibilité : </label><input type="checkbox" name="isEnabled">';
+                    }?>
                     <input type="submit" id="valide" name="valider">
     </form>
     <?php $content = ob_get_clean();
