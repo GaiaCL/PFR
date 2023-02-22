@@ -2,7 +2,7 @@
 require('../src/db/database.php');
 require('../src/model/modificationSubCat.php');
 function modSubCategorie(){
-    $SCs = selectSubCat();
+    $SCs = selectCat();
     $modSubCat = selectModifSubCat();
     $firstMod = $modSubCat[0];
     $secondMod = $modSubCat[1];

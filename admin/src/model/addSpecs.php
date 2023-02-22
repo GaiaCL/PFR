@@ -1,9 +1,14 @@
 <?php 
         function insertColors(){
         $req="";
-        if (isset($_POST['type'], $_POST['isEnabled'])) {
+        if (isset($_POST['type'])) {
             $typ = stripslashes($_POST['type']);
-            $isEnabled = boolval($_POST['isEnabled']);
+            if (isset($_POST['isEnabled'])){
+            $isEnabled = true;
+            }
+            else if (!isset($_POST['isEnabled'])){
+                $isEnabled = false;
+            }
             $query = "INSERT into `colors` (type, is_enabled)
                 VALUES (:type, :is_enabled)";
             // Exécuter la requête sur la base de données
@@ -20,9 +25,14 @@
     }
     function insertSizes(){
         $req="";
-        if (isset($_POST['type'], $_POST['isEnabled'])) {
+        if (isset($_POST['type'])) {
             $typ = stripslashes($_POST['type']);
-            $isEnabled = boolval($_POST['isEnabled']);
+            if (isset($_POST['isEnabled'])){
+                $isEnabled = true;
+                }
+                else if (!isset($_POST['isEnabled'])){
+                    $isEnabled = false;
+                }
             $query = "INSERT into `size` (type, is_enabled)
                 VALUES (:type, :is_enabled)";
             // Exécuter la requête sur la base de données

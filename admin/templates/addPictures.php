@@ -5,11 +5,11 @@
         <?= $msgSend ?>
         <input type="file" name="image">
         <label>Description de l'image :</label><textarea name="description" style="width:30em; height:10em;"></textarea>
-        <select class="form-select m-4" name="subCategorie">
+        <select class="form-select m-4" name="Prod">
                     <option selected ="true" disabled ='disabled'>Choisissez le produit</option>
                     <?php
                     foreach($products as $product){
-                        echo "<option name='products' value = ".$product['id'].'>'.$product['name'] ."</option>" ;
+                        echo "<option value = ".$product['id'].'>'.$product['name'] ."</option>" ;
                     }
                     ?>
         </select>

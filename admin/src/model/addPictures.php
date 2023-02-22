@@ -46,15 +46,15 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
     }
 
     function insertIllustrateTable($idPicture){
-            $selectProducts = $_POST['products'];    
+            $selectProducts = $_POST['Prod'];    
+            var_dump($idPicture);
                     $querySec = "INSERT INTO `illustrate_products` (id_products, id_pictures)
                     VALUES (:id_products, :id_pictures)";
                     $reqs = dbConnect()->prepare($querySec);
                     $reqs->bindValue(':id_pictures', $idPicture, PDO::PARAM_INT);
                     $reqs->bindValue(':id_products', $selectProducts, PDO::PARAM_INT);
                     $reqs->execute();
-                
-               
+                  
             }
         
     

@@ -17,10 +17,10 @@ ob_start();
                     </select>
                     
                     <label class="mb-2">Couleurs : </label>
-                    <div class="d-flex align-items-center ">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center">
                     <?php
                     foreach($colors as $color){
-                        echo "<input type='checkbox' value=".$color['id']." name ='checkboxColor[]'>".$color['type']."</input>" ;
+                        echo "<div class='d-flex flex-column flex-wrap align-items-center justify-content-center p-2 m-1' style='border:solid 1px;background-color: ".$color['type'].";color:#9fa2a6;'><input type='checkbox' value=".$color['id']." name ='checkboxColor[]' >".$color['type']."</input></div>" ;
                     }
                     ?>
                     </div>
