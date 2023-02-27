@@ -2,8 +2,8 @@
 function deleteCategorie() {
     if(isset($_GET['id'])){
     $catID = $_GET['id'];
-    $reqDelete = 'DELETE FROM `categories` WHERE id = :id';
-    $adminDelete = dbconnect()->prepare($reqDelete);
+    $stmtDelete = 'DELETE FROM `categories` WHERE id = :id';
+    $adminDelete = dbconnect()->prepare($stmtDelete);
     $adminDelete->bindValue(':id', $catID, PDO::PARAM_INT);
     $adminDelete ->execute();
 }

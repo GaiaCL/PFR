@@ -2,8 +2,8 @@
 function deleteProducts(){
 if(isset($_GET['id'])){
     $catID = $_GET['id'];
-    $reqDelete = 'DELETE FROM `products` WHERE id = :id';
-    $adminDelete = dbConnect()->prepare($reqDelete);
+    $stmtDelete = 'DELETE FROM `products` WHERE id = :id';
+    $adminDelete = dbConnect()->prepare($stmtDelete);
     $adminDelete->bindValue(':id', $catID, PDO::PARAM_INT);
     $adminDelete ->execute();
  }}

@@ -15,20 +15,20 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
             $name = time();
             $msgSend = "L'envoi a bien été effectué !";
              $query = 'INSERT INTO pictures(name,description,path) VALUES (:name,:description,:path)';
-            $req = dbConnect()->prepare($query);
-            $req->bindValue(':name', $name, PDO::PARAM_STR);
-            $req->bindValue(':description', $description, PDO::PARAM_STR);
-            $req->bindValue(':path',$screenshot , PDO::PARAM_STR);
+            $stmt = dbConnect()->prepare($query);
+            $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+            $stmt->bindValue(':description', $description, PDO::PARAM_STR);
+            $stmt->bindValue(':path',$screenshot , PDO::PARAM_STR);
             
      
      
-            $req->execute();
+            $stmt->execute();
         }}}
     else {
         $msgSend ='';
-        $screenshot ='';
+        $name ='';
     }
-    return [$msgSend, $screenshot];
+    return [$msgSend, $name];
     }
     function selectProducts(){
         $sqlQuery = 'SELECT * FROM `products`';
@@ -37,12 +37,12 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
         $Products = $ProdStatement->fetchAll();
         return $Products;
     }
-    function selectPicture($path){
-        $query = "SELECT id FROM `pictures` WHERE path = :path";
-        $req = dbConnect()->prepare($query);
-        $req->bindValue(':path', $path, PDO::PARAM_INT);
-        $req->execute();
-        $idPicture = $req-> fetch();
+    function selectPicture($name){
+        $query = "SELECT id FROM `pictures` WHERE name = :name";
+        $stmt = dbConnect()->prepare($query);
+        $stmt->bindValue(':name', $name, PDO::PARAM_INT);
+        $stmt->execute();
+        $idPicture = $stmt-> fetch();
         return $idPicture[0];   
     }
 
@@ -51,10 +51,10 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
             var_dump($idPicture);
                     $querySec = "INSERT INTO `illustrate_products` (id_products, id_pictures)
                     VALUES (:id_products, :id_pictures)";
-                    $reqs = dbConnect()->prepare($querySec);
-                    $reqs->bindValue(':id_pictures', $idPicture, PDO::PARAM_INT);
-                    $reqs->bindValue(':id_products', $selectProducts, PDO::PARAM_INT);
-                    $reqs->execute();
+                    $stmts = dbConnect()->prepare($querySec);
+                    $stmts->bindValue(':id_pictures', $idPicture, PDO::PARAM_INT);
+                    $stmts->bindValue(':id_products', $selectProducts, PDO::PARAM_INT);
+                    $stmts->execute();
                   
             }
         

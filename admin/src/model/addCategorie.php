@@ -1,16 +1,16 @@
 <?php 
 function insertCategorie() {
-$req="";
+$stmt="";
 if (isset($_POST['nom'],$_POST['description'])) {
     $name = stripslashes($_POST['nom']);
     $description = stripslashes($_POST['description']);
     $query = "INSERT into `categories` (name, description)
           VALUES (:name, :description)";
-    // Exécuter la requête sur la base de données
-    $req = dbConnect()->prepare($query);
-    $req->bindValue(':name', $name, PDO::PARAM_STR);
-    $req->bindValue(':description', $description, PDO::PARAM_STR);
-    $req->execute();
+    // Exécuter la stmtuête sur la base de données
+    $stmt = dbConnect()->prepare($query);
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->bindValue(':description', $description, PDO::PARAM_STR);
+    $stmt->execute();
     $msg= "Catégorie ajoutée avec succès !";
 }
 else if (!isset($_POST['nom']) || !isset($_POST['nom'])) {

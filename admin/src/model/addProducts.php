@@ -7,7 +7,7 @@ $SCs = $SCStatement->fetchAll();
 return $SCs;
 }
 function insertProducts(){
-$req="";
+$stmt="";
 if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts'], $_POST['subCategorie'], $_POST['isEnabled'])) {
     $nameProducts = stripslashes($_POST['nameProducts']);
     $descProducts = stripslashes($_POST['descProducts']);
@@ -17,14 +17,14 @@ if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts']
     $idSubCat = strip_tags($_POST['subCategorie']);
     $query = "INSERT into `products` (identifier, name, description,price, id_sub_categories, is_enabled)
           VALUES (:identifier, :name, :description, :price, :id_sub_categories, :is_enabled )";
-    $req = dbConnect()->prepare($query);
-    $req->bindValue(':identifier', $identifierProducts, PDO::PARAM_INT);
-    $req->bindValue(':name', $nameProducts, PDO::PARAM_STR);
-    $req->bindValue(':description', $descProducts, PDO::PARAM_STR);
-    $req->bindValue(':price', $priceProducts);
-    $req->bindValue(':id_sub_categories', $idSubCat, PDO::PARAM_INT);
-    $req->bindValue(':is_enabled', $isEnabled, PDO::PARAM_BOOL);
-    $req->execute();
+    $stmt = dbConnect()->prepare($query);
+    $stmt->bindValue(':identifier', $identifierProducts, PDO::PARAM_INT);
+    $stmt->bindValue(':name', $nameProducts, PDO::PARAM_STR);
+    $stmt->bindValue(':description', $descProducts, PDO::PARAM_STR);
+    $stmt->bindValue(':price', $priceProducts);
+    $stmt->bindValue(':id_sub_categories', $idSubCat, PDO::PARAM_INT);
+    $stmt->bindValue(':is_enabled', $isEnabled, PDO::PARAM_BOOL);
+    $stmt->execute();
     $msg= "Produit ajouté avec succès !";
 }
 else if (!isset($_POST['nameProducts']) || !isset($_POST['descProducts']) || !isset($_POST['priceProducts']) || !isset($_POST['subCategorie']) ) {
@@ -36,24 +36,24 @@ return [$msg, $identifierProducts];
 
 function selectProduct($identifier){
     $query = "SELECT id FROM `products` WHERE identifier = :identifier";
-    $req = dbConnect()->prepare($query);
-    $req->bindValue(':identifier', $identifier, PDO::PARAM_INT);
-    $req->execute();
-    $idProduct = $req-> fetch();
+    $stmt = dbConnect()->prepare($query);
+    $stmt->bindValue(':identifier', $identifier, PDO::PARAM_INT);
+    $stmt->execute();
+    $idProduct = $stmt-> fetch();
     return $idProduct[0];   
 }
 function selectSpecsColors() {
     $query = "SELECT * FROM `colors`";
-    $req = dbConnect()->prepare($query);
-    $req->execute();
-    $colors = $req-> fetchAll();
+    $stmt = dbConnect()->prepare($query);
+    $stmt->execute();
+    $colors = $stmt-> fetchAll();
     return $colors;
 }
 function selectSpecsSizes() {
     $query = "SELECT * FROM `size`";
-    $req = dbConnect()->prepare($query);
-    $req->execute();
-    $sizes = $req-> fetchAll();
+    $stmt = dbConnect()->prepare($query);
+    $stmt->execute();
+    $sizes = $stmt-> fetchAll();
     return $sizes;
 }
 function insertSpecsTable($idProducts){
@@ -64,11 +64,11 @@ function insertSpecsTable($idProducts){
             foreach($sizeCheck as $size){     
                 $querySec = "INSERT INTO `specs` (id_products, id_colors, id_size)
                 VALUES (:id_products, :id_colors, :id_size)";
-                $reqs = dbConnect()->prepare($querySec);
-                $reqs->bindValue(':id_products', $idProducts, PDO::PARAM_INT);
-                $reqs->bindValue(':id_colors', $color, PDO::PARAM_INT);
-                $reqs->bindValue(':id_size', $size, PDO::PARAM_INT);
-                $reqs->execute();
+                $stmts = dbConnect()->prepare($querySec);
+                $stmts->bindValue(':id_products', $idProducts, PDO::PARAM_INT);
+                $stmts->bindValue(':id_colors', $color, PDO::PARAM_INT);
+                $stmts->bindValue(':id_size', $size, PDO::PARAM_INT);
+                $stmts->execute();
             }
            
         }

@@ -2,8 +2,8 @@
 function deleteColors(){
     if(isset($_GET['id'])){
     $colorsID = $_GET['id'];
-    $reqDelete = 'DELETE FROM `colors` WHERE id = :id';
-    $adminDelete = dbConnect()->prepare($reqDelete);
+    $stmtDelete = 'DELETE FROM `colors` WHERE id = :id';
+    $adminDelete = dbConnect()->prepare($stmtDelete);
     $adminDelete->bindValue(':id', $colorsID, PDO::PARAM_INT);
     $adminDelete ->execute();
  }
@@ -19,8 +19,8 @@ function requestColorsManagement() {
 function deleteSizes(){
 if(isset($_GET['id'])){
     $sizesID = $_GET['id'];
-    $reqDelete = 'DELETE FROM `size` WHERE id = :id';
-    $adminDelete = dbConnect()->prepare($reqDelete);
+    $stmtDelete = 'DELETE FROM `size` WHERE id = :id';
+    $adminDelete = dbConnect()->prepare($stmtDelete);
     $adminDelete->bindValue(':id', $sizesID, PDO::PARAM_INT);
     $adminDelete ->execute();
  }
