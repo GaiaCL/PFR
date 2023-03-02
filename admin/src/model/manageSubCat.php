@@ -9,9 +9,24 @@
     }
 }
 function requestSubCategorieManagement() {
-    $sql = 'SELECT*FROM `sub_categories`';
-    $query = dbconnect()->prepare($sql);
+    if(isset($_GET['pagenb']) && !empty($_GET['pagenb'])){
+        $currentPage = (int) strip_tags($_GET['pagenb']);
+    }else{
+        $currentPage = 1;
+    }
+    $sql = 'SELECT COUNT(*) AS nb_sub_categories FROM `sub_categories`;';
+    $query = dbConnect()->prepare($sql);
+    $query->execute();
+    $result = $query->fetch();
+    $nbsubCategories = (int) $result['nb_sub_categories'];
+    $parPage = 4;
+    $pages = ceil($nbsubCategories / $parPage);
+    $premier = ($currentPage * $parPage) - $parPage;
+    $sql = 'SELECT * FROM `sub_categories`  LIMIT :premier, :parpage;';
+    $query = dbConnect()->prepare($sql);
+    $query->bindValue(':premier', $premier, PDO::PARAM_INT);
+    $query->bindValue(':parpage', $parPage, PDO::PARAM_INT);
     $query->execute();
     $subCategories = $query->fetchAll(PDO::FETCH_ASSOC);
-    return $subCategories;
+      return [$subCategories, $currentPage, $pages];
     }

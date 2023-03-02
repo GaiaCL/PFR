@@ -9,9 +9,24 @@ if(isset($_GET['id'])){
  }}
 
  function requestProductsManagement() {
-    $sql = 'SELECT*FROM `products`';
-    $query = dbconnect()->prepare($sql);
-    $query->execute();
-    $products = $query->fetchAll(PDO::FETCH_ASSOC);
-    return $products;
+   if(isset($_GET['pagenb']) && !empty($_GET['pagenb'])){
+      $currentPage = (int) strip_tags($_GET['pagenb']);
+  }else{
+      $currentPage = 1;
+  }
+  $sql = 'SELECT COUNT(*) AS nb_products FROM `products`;';
+  $query = dbConnect()->prepare($sql);
+  $query->execute();
+  $result = $query->fetch();
+  $nbProducts = (int) $result['nb_products'];
+  $parPage = 6;
+  $pages = ceil($nbProducts / $parPage);
+  $premier = ($currentPage * $parPage) - $parPage;
+  $sql = 'SELECT * FROM `products`  LIMIT :premier, :parpage;';
+  $query = dbConnect()->prepare($sql);
+  $query->bindValue(':premier', $premier, PDO::PARAM_INT);
+  $query->bindValue(':parpage', $parPage, PDO::PARAM_INT);
+  $query->execute();
+  $products = $query->fetchAll(PDO::FETCH_ASSOC);
+    return [$products, $currentPage, $pages];
     }

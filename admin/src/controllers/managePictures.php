@@ -4,6 +4,9 @@ require('../src/model/managePictures.php');
 
 function managePictures(){
     deletePictures();
-    $pictures = requestPicturesManagement();
+    $tabPictures = requestPicturesManagement();
+    $pictures = $tabPictures[0];
+    $currentPage = $tabPictures[1];
+    $pages = $tabPictures[2];
     require('../templates/managePictures.php');
 }

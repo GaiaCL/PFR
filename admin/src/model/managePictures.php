@@ -10,9 +10,24 @@ if(isset($_GET['id'])){
 }
 
 function requestPicturesManagement() {
-    $sql = 'SELECT*FROM `pictures`';
-    $query = dbconnect()->prepare($sql);
+    if(isset($_GET['pagenb']) && !empty($_GET['pagenb'])){
+        $currentPage = (int) strip_tags($_GET['pagenb']);
+    }else{
+        $currentPage = 1;
+    }
+    $sql = 'SELECT COUNT(*) AS nb_pictures FROM `pictures`;';
+    $query = dbConnect()->prepare($sql);
+    $query->execute();
+    $result = $query->fetch();
+    $nbPictures = (int) $result['nb_pictures'];
+    $parPage = 4;
+    $pages = ceil($nbPictures / $parPage);
+    $premier = ($currentPage * $parPage) - $parPage;
+    $sql = 'SELECT * FROM `pictures`  LIMIT :premier, :parpage;';
+    $query = dbConnect()->prepare($sql);
+    $query->bindValue(':premier', $premier, PDO::PARAM_INT);
+    $query->bindValue(':parpage', $parPage, PDO::PARAM_INT);
     $query->execute();
     $pictures = $query->fetchAll(PDO::FETCH_ASSOC);
-    return $pictures;
+      return [$pictures, $currentPage, $pages];
     }
