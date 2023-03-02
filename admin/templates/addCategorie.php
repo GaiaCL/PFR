@@ -1,6 +1,6 @@
 <?php $title = "Ajout Catégorie"; ?>
 <?php  ob_start();?>
-    <h1 style="box-shadow:none;">Ajouter une Catégorie</h1>
+    <h1 style="box-shadow: none;margin-top:2em;">Ajouter une Catégorie</h1>
     <form method="POST" action="">
         <?= $msg?>
         <label>Nom de la Catégorie : </label><input type="text" name="nom">

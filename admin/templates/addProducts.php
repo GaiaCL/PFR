@@ -1,7 +1,7 @@
 <?php $title = 'Ajout Produits';
 ob_start();
 ?>
-    <h1 style="box-shadow:none;">Ajouter un Produit</h1>
+    <h1 style="box-shadow: none;margin-top:2em;">Ajouter un Produit</h1>
     <form method="POST" action="">
         <?= $msg?>
         <label>Nom du Produit : </label><input type="text" name="nameProducts">

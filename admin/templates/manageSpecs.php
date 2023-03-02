@@ -21,8 +21,10 @@
                         else {
                             echo "Indisponible";
                         }?></td>             
-            <td id="modif">  <div id="modif1"><a href="index.php?page=modificationSpecs<?= $name; ?>&id=<?php echo $spec['id']?>" style="background-spec:black;padding:0.3em;spec:white;border-radius:1em;">Modifier</a>  
-            <a href="index.php?page=manageSpecs<?= $name; ?>&id= <?php echo $spec['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" style="background-spec:black;padding:0.3em;spec:white;border-radius:1em;">Supprimer</a><div></td>
+            <td class="d-flex justify-content-center">  
+                <div class="me-2"><a href="index.php?page=modificationSpecs<?= $name; ?>&id=<?php echo $spec['id']?>" style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Modifier</a></div>
+                <div><a href="index.php?page=manageSpecs<?= $name; ?>&id= <?php echo $spec['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Supprimer</a></div>
+            </td>
             </tr>
             <?php
         }

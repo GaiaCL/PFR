@@ -8,5 +8,6 @@ function manageProducts(){
     $products = $tabProducts[0];
     $currentPage = $tabProducts[1];
     $pages = $tabProducts[2];
+    $stock = stocks();
     require('../templates/manageProducts.php');
 }

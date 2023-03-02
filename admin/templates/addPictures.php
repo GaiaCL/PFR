@@ -1,6 +1,6 @@
 <?php $title ='Ajout Images' ?>
 <?php ob_start();?>
-<h1 style="box-shadow:none;">Saisie des Images</h1>
+<h1 style="box-shadow: none;margin-top:2em;">Saisie des Images</h1>
     <form method="POST" action="#" enctype="multipart/form-data">
         <?= $msgSend ?>
         <input type="file" name="image">
