@@ -1,5 +1,6 @@
 <?php
 
+function dbConnect(){
 class DatabaseConnection
 {
     public ?PDO $database = null;
@@ -14,4 +15,5 @@ class DatabaseConnection
 
         return $this->database;
     }
+}
 }

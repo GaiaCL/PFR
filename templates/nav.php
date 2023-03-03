@@ -1,3 +1,4 @@
+   <?php ob_start(); ?>
    <nav class="container-fluid NavMagicBox">
         <div class="row">
           <div class="col pt-4">
@@ -27,14 +28,14 @@
     <header>
       <div class="container-fluid d-flex justify-content-center">
           <div class="row">
-              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href=""> Incense & Plant</a></div>
-              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href=""> Candles & Rituals</a></div>
-              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href=""> Divination</a></div>
-              <div class="col pe-5"><a href=""> <img width ="380em" src="../src/assets/images/magicboxlogotsp.png"></a></div>
-              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href=""> Cristals</a></div>
-              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href=""> Library</a></div>
-              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href=""> Infos</a></div>
+              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=IncensePlant"> Incense & Plant</a></div>
+              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=CandlesRituals"> Candles & Rituals</a></div>
+              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Divination"> Divination</a></div>
+              <div class="col pe-5"><a href="index.php?page=Home"> <img width ="380em" src="../src/assets/images/magicboxlogotsp.png"></a></div>
+              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Cristals"> Cristals</a></div>
+              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Library"> Library</a></div>
+              <div class="col d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Infos"> Infos</a></div>
           </div>
       </div>
     </header>
-    
+    <?php $header = ob_get_clean(); ?>

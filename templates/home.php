@@ -1,6 +1,8 @@
+<?php $title = "Home";
+ob_start(); ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active ">
@@ -30,4 +32,25 @@
             </div>
         </div>
     </div>
-</div>Gaïa Coelsch
+    <div class="row m-5">
+        <div class="col-12" style="background: #193676; height:30em;">
+              <div class="col-12">
+                <h2>Some of Our Products</h2>
+              </div>
+              <div class="col-12">
+                <?php foreach($products as $product) { ?>
+                    <div class="card" style="width: 18rem;">
+                    <img src="<?=$product['path']?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?=$product['name']?></h5>
+                        <p class="card-text"><?php$product['price']?></p>
+                    </div>
+                    </div>
+                <?php }?>
+              </div>  
+        </div>
+    </div>
+</div>
+<?php $content = ob_get_clean();
+require ('layout.php');
+?>
