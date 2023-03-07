@@ -7,6 +7,7 @@
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Price</th>
+            <th scope="col">Date</th>
             <th scope="col">Stocks</th>
             <th scope="col">Category</th>
             <th scope="col">Actions</th>
@@ -17,9 +18,10 @@
         foreach($products as $product){
             ?>
             <tr>
-            <td><?= $product['name'] ?></td>
+            <td><?= $product['name_products'] ?></td>
             <td><?= $product['description'] ?></td>
             <td>$<?= $product['price'] ?></td>
+            <td><?= $product['date_ajout'] ?></td>
             <td><?= $stock ?></td>
             <td><?= $product['nameSubCat'] ?></td>                
             <td class="text-center">  

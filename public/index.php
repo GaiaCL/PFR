@@ -4,9 +4,13 @@ if(!isset($_GET['page'])) {
     require('../src/controllers/home.php');
     home();
     }
-     else if(isset($_GET['page'])) {
+     else  {
     $page = strval($_GET['page']);
-        if ($page == "Home"){
+        if ($page == "Product"){
+            require('../src/controllers/product.php');
+            product();
+        }
+        else {
             require('../src/controllers/home.php');
             home();
         }

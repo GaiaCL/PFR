@@ -15,9 +15,9 @@
         foreach($pictures as $picture){
             ?>
             <tr>
-            <td><?= $picture['name'] ?></td>
+            <td><?= $picture['name_pictures'] ?></td>
             <td><?= $picture['description'] ?></td>
-            <td><?= "<img src=".$picture['path']." style='width:10em;'>" ?></td>                
+            <td><?= "<img src=../".$picture['path']." style='width:10em;'>" ?></td>                
             <td class="text-center">  
                 <div class="mb-3 mt-5"><a href="index.php?page=modificationPictures&id=<?php echo $picture['id']?>" style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Modifier</a></div> 
                 <div><a href="index.php?page=managePictures&id= <?php echo $picture['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Supprimer</a></div>

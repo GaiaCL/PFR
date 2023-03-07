@@ -12,16 +12,18 @@ if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts']
     $nameProducts = stripslashes($_POST['nameProducts']);
     $descProducts = stripslashes($_POST['descProducts']);
     $priceProducts = stripslashes($_POST['priceProducts']);
+    $date = CURDATE();
     $isEnabled = boolval($_POST['isEnabled']);
     $identifierProducts = time();
     $idSubCat = strip_tags($_POST['subCategorie']);
-    $query = "INSERT into `products` (identifier, name, description,price, id_sub_categories, is_enabled)
-          VALUES (:identifier, :name, :description, :price, :id_sub_categories, :is_enabled )";
+    $query = "INSERT into `products` (identifier, name, description,price, date_ajout, id_sub_categories, is_enabled)
+          VALUES (:identifier, :name, :description, :price, :date_ajout, :id_sub_categories, :is_enabled )";
     $stmt = dbConnect()->prepare($query);
     $stmt->bindValue(':identifier', $identifierProducts, PDO::PARAM_INT);
     $stmt->bindValue(':name', $nameProducts, PDO::PARAM_STR);
     $stmt->bindValue(':description', $descProducts, PDO::PARAM_STR);
     $stmt->bindValue(':price', $priceProducts);
+    $stmt->bindValue(':date_ajout', $date, PDO::PARAM_STR);
     $stmt->bindValue(':id_sub_categories', $idSubCat, PDO::PARAM_INT);
     $stmt->bindValue(':is_enabled', $isEnabled, PDO::PARAM_BOOL);
     $stmt->execute();
