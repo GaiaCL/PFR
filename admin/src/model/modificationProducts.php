@@ -15,7 +15,7 @@ if (isset($_GET['id'])){
     $idsStatement->bindValue(':id', $id, PDO::PARAM_INT);
     $idsStatement->execute();
     $res = $idsStatement->fetch();
-    $nameProducts = $res['name'];
+    $nameProducts = $res['name_products'];
     $descriptionProducts = $res['description'];
     $priceProducts = $res['price'];
     $isEnabled = boolval($res['is_enabled']);
@@ -27,10 +27,10 @@ if (isset($_GET['id'])){
         $isEnabledUpdate = boolval($_POST['isEnabled']);
         $dateUpdate = CURDATE();
         if(isset($_POST['valider'])){
-            $query = 'UPDATE products SET name = :name, description = :description, price = :price, date_ajout = :date_ajout, is_enabled = :is_enabled, id_sub_categories = :id_sub_categories WHERE id = :id';
+            $query = 'UPDATE products SET name_products = :name_products, description = :description, price = :price, date_ajout = :date_ajout, is_enabled = :is_enabled, id_sub_categories = :id_sub_categories WHERE id = :id';
             $idsStatement = dbConnect()->prepare($query);
             $idsStatement->bindValue(':id', $id, PDO::PARAM_INT); 
-            $idsStatement->bindValue(':name', $nameProductsUpdate, PDO::PARAM_STR);
+            $idsStatement->bindValue(':name_products', $nameProductsUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':description', $descriptionProductsUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':price', $priceProductsUpdate);
             $idsStatement->bindValue(':date_ajout', $dateUpdate, PDO::PARAM_STR);

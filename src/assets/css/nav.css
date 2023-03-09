@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+.txtNavTop {
+    color: #DFD100;
+    font-family: 'Baloo 2', cursive;
+}
+.NavMagicBox {
+    background-color:#193676;
+    height: 5em;
+    width: 100%;
+    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.51);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.socialMediaNB {
+    margin: 0.2em;
+}
+.socialMediaNB:hover {
+    opacity: 0.5;
+}
+.formSearch {
+    font-family: 'Merriweather';
+}
+#searchBttn {
+    background-color:#DFD100;
+    border-radius:2em;
+    width:8em;
+    box-shadow: inset -1px 3px 8px 5px #595b5e,  inset 0px 0px 22px 2px rgba(0,0,0,0);
+}
+#searchBttn:hover {
+    opacity: 0.8;
+}
+#magicBoxLogo {
+    filter: drop-shadow(-1px 2px 4px #000);
+}
+.navBttn {
+    background-color:#193676 ;
+    width: 10em;
+    height: 4em;
+    text-decoration: none;
+    color: #DFD100;
+    font-family: 'Baloo 2', cursive;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    border-radius: 0.4em ;
+}
+.navBttn:hover {
+    background-color: #122755;
+}
+#navMain {
+    margin-top: 8em;
+}
+#signIn {
+    text-align:center;
+    text-decoration:none;
+    padding-top: 0.2em;
+}
+#signIn:hover {
+    opacity: 0.5;
+}
+#cartShop {
+    text-align:center;
+    padding-top: 0.4em;
+    text-decoration:none;
+}
+#cartShop:hover {
+    opacity: 0.5;
+}
