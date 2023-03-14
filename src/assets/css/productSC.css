@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+body {
+    background-image: url("../images/bgimagebody.webp");
+    
+}
+#titleSCProducts {
+    background: rgb(26, 57, 136);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+}
+#titleSCProducts h1 {
+    color: #DFD100;
+    font-family: 'Merriweather';
+    text-transform: uppercase;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+}
+#titleSCProducts img {
+    filter: drop-shadow(0px 0px 6px #000);
+}
+#productSCPageLeft {
+    background: rgb(26, 57, 136);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    min-height: 100em;
+    border-radius: 0.8em;
+}
+.cardProducts {
+    width: 15rem;
+    height: 27em;
+    background-color:#193781;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+}
+.cardTitleProducts {
+    height:4em;
+    color: #DFD100;
+    font-family: 'Merriweather';
+    font-size:0.9em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.cardPrice {
+    color:#ffffff;
+    font-size:1.5em;
+        text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    font-family: 'Merriweather';
+}
+.buttonBuy {
+    background:#DFD100;
+    font-family: 'Merriweather';
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+.buttonBuy:hover {
+    background: #7b7301;
+}
+#moreAboutSC {
+    background: #193781;
+    color: #DFD100;
+    font-family: 'Merriweather';
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+}
+#moreAboutSC h2 {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+#moreAboutSC p {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+#moreAboutSC img {
+    opacity: 0.9;
+    filter: drop-shadow(0px 0px 6px #000);
+
+}
+.pagin {
+    background: #193781;
+    color: #DFD100;
+    border: none;
+    border-radius: 0.2em;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.pag:hover {
+    background: #122755;
+    color: #7b7301;
+
+}
+.paginationLi {
+    list-style: none;
+}
+.pageItem {
+color: #7b7301;
+}

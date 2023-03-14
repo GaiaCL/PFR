@@ -15,6 +15,12 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/product.php');
             product();
         }
+        else if ($page == "productSC"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/productSC.php');
+            productSC();
+        }
         else {
             require('../src/controllers/nav.php');
             require('../src/controllers/footer.php');

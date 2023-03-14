@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+body {
+    background-image: url("../images/bgimagebody.webp");
+    
+}
+#titleProducts {
+    background: rgb(26, 57, 136);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+}
+#titleProducts h1 {
+    color: #DFD100;
+    font-family: 'Merriweather';
+    text-transform: uppercase;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+}
+#titleProducts img {
+    filter: drop-shadow(0px 0px 6px #000);
+}
+.subCategorie a {
+    text-decoration: none;
+    background: #193781;
+    font-family: 'Merriweather';
+    color: #DFD100;
+    border-radius: 2em;
+    padding: 1em;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.subCategorie a:hover {
+    background-color: #122755;
+}
+#productPageLeft {
+    background: rgb(26, 57, 136);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    min-height: 10em;
+    border-radius: 0.8em;
+}
+#productPageRight {
+    background: rgb(26, 57, 136);
+    width: 20em;
+    height: 100em;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    border-radius: 0.8em;
+}
+#productPageRight h2 {
+    color: #DFD100;
+    font-family: 'Merriweather';
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+#productPageRight a {
+    text-decoration: none;
+}
+.cardProducts {
+    width: 15rem;
+    height: 27em;
+    background-color:#193781;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+}
+.cardTitleProducts {
+    height:4em;
+    color: #DFD100;
+    font-family: 'Merriweather';
+    font-size:0.9em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.cardPrice {
+    color:#ffffff;
+    font-size:1.5em;
+        text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    font-family: 'Merriweather';
+}
+.newProduct {
+    background: #193781;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    font-family: 'Merriweather';
+    border-radius: 0.5em;
+}
+.newProduct img {
+    width: 10em;
+    border-radius: 0.3em;
+    border: #122755 10px double;
+}
+.newProduct h3 {
+    font-size: 1.2em;
+    color: #DFD100;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.newProduct p {
+    font-size: 1.2em;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.buttonBuy {
+    background:#DFD100;
+    font-family: 'Merriweather';
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+.buttonBuy:hover {
+    background: #7b7301;
+}
+#moreAbout {
+    background: #193781;
+    color: #DFD100;
+    font-family: 'Merriweather';
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+}
+#moreAbout h2 {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+#moreAbout p {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+#moreAbout img {
+    opacity: 0.9;
+    filter: drop-shadow(0px 0px 6px #000);
+
+}
+.pagin {
+    background: #193781;
+    color: #DFD100;
+    border: none;
+    border-radius: 0.2em;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.pag:hover {
+    background: #122755;
+    color: #7b7301;
+
+}
+.paginationLi {
+    list-style: none;
+}
+.pageItem {
+color: #7b7301;
+}

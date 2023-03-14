@@ -1,22 +1,15 @@
-<?php $title ="$cat"; ?>
+<?php $title = "$subCat";?>
 <?php ob_start(); ?>
-
 <div class="container-fluid">
-    <div class="row p-3" id="titleProducts">
+    <div class="row p-3 mb-5" id="titleSCProducts">
         <div class="col-4 d-flex justify-content-end align-items-center"><img src="../src/assets/images/sageleft.webp" alt="Sage Left Side"></div>
-        <div class="col-4 d-flex justify-content-center align-items-center"><h1><?= $cat ?></h1></div>
+        <div class="col-4 d-flex justify-content-center align-items-center"><h1><?= $subCat ?></h1></div>
         <div class="col-4 d-flex justify-content-start align-items-center"><img src="../src/assets/images/sageright.webp" alt="Sage Right Side"></div>
     </div>
-    <div class="row p-4">
-        <div class="col-12 d-flex justify-content-evenly align-items-center subCategorie">
-            <?php foreach($subCats as $subCat){?>
-                <a href="index.php?page=productSC&id=<?= $subCat['scid'] ?>"><?= $subCat['nsc']?></a>
-            <?php } ?>
-        </div>
-    </div>
+    
     <div class="row d-flex justify-content-evenly">
 
-        <div class="col-9 p-5 d-flex flex-wrap justify-content-evenly" id="productPageLeft">
+        <div class="col-9 p-5 d-flex flex-wrap justify-content-evenly" id="productSCPageLeft">
             <?php foreach($products as $product) { ?>
             <div class="card text-center cardProducts mb-5">
                 <a href="index.php/page=product&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture">
@@ -30,31 +23,19 @@
                     <div class="col-12 d-flex justify-content-center">
                         <ul class="paginationLi d-flex align-items-center">
                             <li class="pageItem <?= ($currentPage == 1) ? "disabled" : "" ?> m-2 ">
-                                <a href="?page=Product&id=<?= $_GET['id']?>&pagenb=<?= ($currentPage == 1) ? $currentPage :$currentPage - 1 ?>" class="page-link pagin pag p-2">Précédente</a>
+                                <a href="?page=productSC&id=<?= $_GET['id']?>&pagenb=<?= ($currentPage == 1) ? $currentPage :$currentPage - 1 ?>" class="page-link pagin pag p-2">Précédente</a>
                             </li>
                             <li>
                                 <div class="cont p-2 pagin "><?= (isset($_GET['pagenb'])) ? $_GET['pagenb'] : 1 ?><div>
                             </li>
                             <li class="pageItem <?= ($currentPage == $pages) ? "disabled" : "" ?> m-2">
-                            <a href="?page=Product&id=<?= $_GET['id']?>&pagenb=<?= ($currentPage == $pages) ? $currentPage : $currentPage + 1 ?>" class="page-link pagin pag p-2">Suivante</a>
+                            <a href="?page=productSC&id=<?= $_GET['id']?>&pagenb=<?= ($currentPage == $pages) ? $currentPage : $currentPage + 1 ?>" class="page-link pagin pag p-2">Suivante</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-        <div class="col-3" id="productPageRight">
-            <h2 class="m-3 text-center">New Products </h2>
-            <?php foreach ($newProducts as $newProduct){ ?>
-                <a href="">
-                    <div class="col newProduct d-flex flex-column justify-content-center align-items-center m-3 p-3">
-                        <img src="../admin/<?=$newProduct['path']?>" alt="">
-                        <h3 class="mt-2 text-center"><?=$product['name_products']?></h3>
-                        <p>$<?=$product['price']?></p>
-                    </div>
-                </a>
-            <?php } ?>
-        </div> 
     </div> 
-    <div class="row m-5 p-5" id="moreAbout">
+    <div class="row m-5 p-5" id="moreAboutSC">
             <div class="col-4">
             <h2 class="p-4 mb-4 text-center">More about Incense & Plants</h2>
             </div>
@@ -78,7 +59,6 @@
             </div>
     </div>    
 </div>
-
 
 <?php $content = ob_get_clean(); ?>
 <?php require('layout.php'); ?>
