@@ -16,11 +16,11 @@ if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts']
     $isEnabled = boolval($_POST['isEnabled']);
     $identifierProducts = time();
     $idSubCat = strip_tags($_POST['subCategorie']);
-    $query = "INSERT into `products` (identifier, name, description,price, date_ajout, id_sub_categories, is_enabled)
-          VALUES (:identifier, :name, :description, :price, :date_ajout, :id_sub_categories, :is_enabled )";
+    $query = "INSERT into `products` (identifier, name_products, description,price, date_ajout, id_sub_categories, is_enabled)
+          VALUES (:identifier, :name_products, :description, :price, :date_ajout, :id_sub_categories, :is_enabled )";
     $stmt = dbConnect()->prepare($query);
     $stmt->bindValue(':identifier', $identifierProducts, PDO::PARAM_INT);
-    $stmt->bindValue(':name', $nameProducts, PDO::PARAM_STR);
+    $stmt->bindValue(':name_products', $nameProducts, PDO::PARAM_STR);
     $stmt->bindValue(':description', $descProducts, PDO::PARAM_STR);
     $stmt->bindValue(':price', $priceProducts);
     $stmt->bindValue(':date_ajout', $date, PDO::PARAM_STR);

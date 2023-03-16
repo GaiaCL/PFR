@@ -9,7 +9,7 @@ ob_start(); ?>
                     <option selected ="true" disabled ='disabled'>Choisissez la Sous-Catégorie</option>
                     <?php
                     foreach($SCs as $SC){
-                        echo "<option name='optionSC' value = ".$SC['id'].'>'.$SC['name'] ."</option>" ;
+                        echo "<option name='optionSC' value = ".$SC['id'].'>'.$SC['name_sub_categorie'] ."</option>" ;
                     }
                     ?>
                     </select>

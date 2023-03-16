@@ -14,7 +14,7 @@
         foreach($categories as $categorie){
             ?>
             <tr>
-            <td><?= $categorie['name'] ?></td>
+            <td><?= $categorie['name_categorie'] ?></td>
             <td><?=$categorie['description']?></td>                
             <td class="text-center">  
                 <div class="mb-3 mt-1"><a href="index.php?page=modificationCat&id=<?php echo $categorie['id']?>" style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Modifier</a></div> 

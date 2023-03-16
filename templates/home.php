@@ -51,7 +51,7 @@ ob_start(); ?>
                     <div class="card-body">
                             <h3 class="card-title cardTitleProducts"><?=$someProduct['name_products']?></h3>
                             <p class="card-text mb-2 cardPrice">$<?=$someProduct['price']?></p></a>
-                            <a href="" class="btn buttonBuy">Buy Now</a>
+                            <a href="" class="btn buttonBuy mt-2">Buy Now</a>
                     </div>
                     </div>
                 <?php }?>
@@ -64,7 +64,7 @@ ob_start(); ?>
                         <div class="card-body">
                             <h5 class="card-title cardTitleProducts"><?=$newProduct['name_products']?></h5>
                             <p class="card-text mb-2 cardPrice">$<?=$newProduct['price']?></p></a>
-                            <a href="" class="btn buttonBuy">Buy Now</a>
+                            <a href="" class="btn buttonBuy mt-2">Buy Now</a>
                         </div>
                     </div>
                 <?php }?>

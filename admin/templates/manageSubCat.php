@@ -15,7 +15,7 @@
         foreach($subCategories as $subCategorie){
             ?>
             <tr>
-            <td><?= $subCategorie['name'] ?></td>
+            <td><?= $subCategorie['name_sub_categorie'] ?></td>
             <td><?=$subCategorie['description']?></td>
             <td><?=$subCategorie['nameCat']?></td>                
             <td class="text-center">  

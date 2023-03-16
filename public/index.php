@@ -21,6 +21,12 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/productSC.php');
             productSC();
         }
+        else if ($page == "Contact"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/contact.php');
+            contact();
+        }
         else {
             require('../src/controllers/nav.php');
             require('../src/controllers/footer.php');

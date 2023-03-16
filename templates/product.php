@@ -19,11 +19,11 @@
         <div class="col-9 p-5 d-flex flex-wrap justify-content-evenly" id="productPageLeft">
             <?php foreach($products as $product) { ?>
             <div class="card text-center cardProducts mb-5">
-                <a href="index.php/page=product&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture">
+                <a href="index.php/page=Detail&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture">
                 <div class="card-body">
                     <h3 class="card-title cardTitleProducts"><?=$product['name_products']?></h3>
                     <p class="card-text mb-2 cardPrice">$<?=$product['price']?></p></a>
-                    <a href="" class="btn buttonBuy">Buy Now</a>
+                    <a href="" class="btn buttonBuy mt-2">Buy Now</a>
                 </div>
             </div>
             <?php }?>

@@ -11,7 +11,7 @@ function getSubCategorieProducts(){
     $stmt->execute();
     $result = $stmt->fetch();
     $nbProducts = (int) $result['nb_products'];
-    $parPage = 15;
+    $parPage = 18;
     $pages = ceil($nbProducts / $parPage);
     $premier = ($currentPage * $parPage) - $parPage;
     $stmt = dbConnect()->prepare('SELECT*FROM categories as c INNER JOIN sub_categories as sc ON c.id = sc.id_categorie INNER JOIN products as p ON sc.id = p.id_sub_categories INNER JOIN illustrate_products as ip ON p.id = ip.id_products INNER JOIN pictures as pi ON pi.id = ip.id_pictures WHERE sc.id = '.$_GET['id'].' LIMIT :premier, :parpage;');

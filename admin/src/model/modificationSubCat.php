@@ -16,17 +16,17 @@ if (isset($_GET['id'])){
     $idsStatement->bindValue(':id', $id, PDO::PARAM_INT);
     $idsStatement->execute();
     $res = $idsStatement->fetch();
-    $nameSubCat = $res['name'];
+    $nameSubCat = $res['name_sub_categorie'];
     $descriptionSubCat = $res['description'];
     if (isset($_POST['nameSubCat']) && isset($_POST['descSubCat']) && isset($_POST['categories'])) {
         $nameUpdate = strip_tags($_POST['nameSubCat']);
         $descriptionUpdate = strip_tags($_POST['descSubCat']);
         $idCatUpdate = strip_tags($_POST['categories']);
         if(isset($_POST['valider'])){
-            $query = 'UPDATE sub_categories SET name = :name, description = :description, id_categorie = :id_categorie WHERE id = :id';
+            $query = 'UPDATE sub_categories SET name_sub_categorie = :name_sub_categorie, description = :description, id_categorie = :id_categorie WHERE id = :id';
             $idsStatement = dbConnect()->prepare($query);
             $idsStatement->bindValue(':id', $id, PDO::PARAM_INT); 
-            $idsStatement->bindValue(':name', $nameUpdate, PDO::PARAM_STR);
+            $idsStatement->bindValue(':name_sub_categorie', $nameUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':description', $descriptionUpdate, PDO::PARAM_STR);
             $idsStatement->bindValue(':id_categorie', $idCatUpdate, PDO::PARAM_STR);
             $idsStatement->execute();

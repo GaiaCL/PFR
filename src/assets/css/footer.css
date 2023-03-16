@@ -8,6 +8,13 @@ footer {
 .footerSection {
     margin: 1em;
 }
+.footerSection li a {
+    text-decoration: none;
+    color: #DFD100;
+}
+.footerSection li a:hover {
+    opacity: 0.5;
+}
 #adressSection {
     width: 15em;
     padding: 1em;
