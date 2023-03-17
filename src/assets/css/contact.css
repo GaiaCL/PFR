@@ -23,7 +23,6 @@ body {
 }
 #formContact {
     background: #193781;
-    background-image: url('../images/munster.webp');
     color: #DFD100;
     font-family: 'Merriweather';
     text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);

@@ -98,7 +98,7 @@ ob_start(); ?>
         </div>
         <div class="col-4 text-center newsLetterSub">
             <form method="post" action="#">
-                    <input type="mail" name="mail" id="newsletter" placeholder="Mail"> 
+                    <input type="mail" name="mail" id="newsletter" placeholder="Mail" class="p-3"> 
                     <button type="submit" name="newsletterValidation">OK</button>
             </form>
         </div>

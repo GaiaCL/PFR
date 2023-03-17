@@ -1,5 +1,4 @@
-<?php 
-require('../src/db/database.php');
+<?php
 require('../src/model/home.php');
 
 function home() {

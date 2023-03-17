@@ -1,5 +1,4 @@
 <?php 
-require('../src/db/database.php');
 require('../src/model/product.php');
 
 function product() { 

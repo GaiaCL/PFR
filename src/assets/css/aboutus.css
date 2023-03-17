@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+body {
+    background-image: url("../images/bgimagebody.webp");
+    
+}
+#titleAbout {
+    background: rgb(26, 57, 136);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+}
+#titleAbout h1 {
+    color: #DFD100;
+    font-family: 'Merriweather';
+    text-transform: uppercase;
+    font-size: 5.5em;
+    text-align: center;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+}
+#titleAbout img {
+    filter: drop-shadow(0px 0px 6px #000);
+}

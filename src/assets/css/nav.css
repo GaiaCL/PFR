@@ -54,14 +54,6 @@
 #navMain {
     margin-top: 8em;
 }
-#signIn {
-    text-align:center;
-    text-decoration:none;
-    padding-top: 0.2em;
-}
-#signIn:hover {
-    opacity: 0.5;
-}
 #cartShop {
     text-align:center;
     padding-top: 0.4em;
@@ -69,4 +61,19 @@
 }
 #cartShop:hover {
     opacity: 0.5;
+}
+#formLogin input {
+    margin: 1em;
+    border-radius: 0.5em;
+}
+.buttonLogin {
+    background: #DFD100;
+    width: 10em;
+}
+#loginForm {
+    background: #193676;
+    color: #DFD100;
+    font-family: 'Merriweather';
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+   
 }

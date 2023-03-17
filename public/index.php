@@ -27,6 +27,12 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/contact.php');
             contact();
         }
+        else if ($page == "AboutUs"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/aboutus.php');
+            aboutUs();
+        }
         else {
             require('../src/controllers/nav.php');
             require('../src/controllers/footer.php');
