@@ -1,7 +1,7 @@
    <?php ob_start(); ?>
    <nav class="container-fluid NavMagicBox">
         <div class="row">
-          <div class="col-3 pt-4">
+          <div class="col-3 d-flex justify-content-start align-items-center ps-5">
               <a href="" class="socialMediaNB"><img  src="../src/assets/images/facebooknb.webp" alt="Facebook"></a>
               <a href="" class="socialMediaNB"><img  src="../src/assets/images/twitternb.webp" alt="Twitter"></a>
               <a href="" class="socialMediaNB"><img  src="../src/assets/images/youtubenb.webp" alt="Youtube"></a>
@@ -9,52 +9,43 @@
           </div>
           <div class="col-6  d-flex justify-content-center align-items-center">
                       <form class="d-flex align-items-center formSearch" method="POST" action="">
-                          <input type="text" class="form-control" placeholder="Search..." style="width:30em;border-radius:2em;margin-right:1em;">
+                          <input type="text" class="form-control" placeholder="Search..." id="srch">
                           <button class="btn" id="searchBttn">Search</button>
                       </form>
           </div>
-          <div class="col-3 d-flex justify-content-end align-items-center ps-2">
-            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
-                <img src="../src/assets/images/signin.webp" alt="Sign In" >
-                <button type="button" class="btn txtNavTop" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Sign In
-                </button>
-            </div>
-            <div class="col-2 d-flex flex-column justify-content-center align-items-center pt-2">
-              </a>
-              <a href="" id="cartShop">
-                <img src="../src/assets/images/cart.webp" alt="Shopping Cart">
-                <p class="txtNavTop">0.00$</p>
-              </a>
+          <div class="col-3 d-flex justify-content-end align-items-center">
+            <div class="row d-flex justify-content-center align-items-center pe-5">
+              <?php if(!isset($_SESSION['username'])){?>
+              <div class="col-6 d-flex flex-column justify-content-center align-items-center p-0">
+                  <img src="../src/assets/images/signinUser.webp" alt="Sign In" >
+                  <a href="index.php?page=Login"><button type="button" class="btn txtNavTop">
+                  Sign In
+                  </button></a>
+              </div>
+              <?php } else if (isset($_SESSION['username'])){ ?>
+                  <div class="col-6 d-flex flex-column justify-content-center align-items-center p-0">
+                      <div class="nav-item dropdown-center"> 
+                        <button class="nav-link dropdown d-flex flex-column align-items-center" type="button" data-bs-toggle="dropdown" id="loginUser">
+                            <img src="../src/assets/images/signinUser.webp" alt="Sign In" >
+                            <?= $_SESSION['username'] ?>
+                        </button>
+                        <ul class="dropdown-menu itemMenu mt-2">
+                          <li><a class="dropdown-item itemUser" href="#">My Account</a></li>
+                          <li><a class="dropdown-item itemUser" href="index.php?action=logout">Logout</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                <?php }?>
+              <div class="col-6 d-flex flex-column justify-content-center align-items-center pt-2 mt-2">
+                <a href="" id="cartShop">
+                  <img src="../src/assets/images/signinCart.webp" alt="Shopping Cart" >
+                  <p class="txtNavTop">0.00$</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
   </nav>
-  <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
-            <div class="modal-dialog">
-              <div class="modal-content" id='loginForm'>
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5"  id="exampleModalLabel">SIGN IN</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form class="d-flex flex-column justify-content-center align-items-center" action="" method="post" name="login" id='formLogin'>
-                    <?= $fail; ?>
-                    <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
-                    <label>
-                    <input type="password" name="password" placeholder="Mot de passe">
-                    </label>
-                    <input type="submit" value="Login" name="submit" class="box-button p-1 buttonLogin">
-                  </form>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                  <p>Don't have an account ?</p><a href='index.php?page=RegisterUser'>Register Here !</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
     <header>
       <div class="container-fluid d-flex justify-content-center">
           <div class="row mb-5" id="navMain">

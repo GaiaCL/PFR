@@ -13,3 +13,4 @@ function selectNewProducts(){
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $products;
 }
+

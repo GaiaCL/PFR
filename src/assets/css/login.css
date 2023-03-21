@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
-
-
 body {
     background-image: url("../images/bgimagebody.webp");
     
@@ -9,12 +5,19 @@ body {
 .box-title {
     color: #DFD100;
 }
-#registration {
+.box-subtitle {
+    color: #a2a2a2;
+    font-size: 1em;
+}
+.box-subtitle a {
+    color: #DFD100;
+}
+#login {
     background: #193781;
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
     padding: 3em;
 }
-#register {
+#loginValidate {
     width: 10em;
     border: none;
     border-radius: 0.5em;
@@ -26,7 +29,7 @@ body {
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
 
 }
-#register:hover  {
+#loginValidate:hover {
     opacity: 0.5;
 }
 label {

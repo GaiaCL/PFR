@@ -1,5 +1,5 @@
 <?php
-    
+session_start();    
 if(!isset($_GET['page'])) {
     require('../src/controllers/nav.php');
     require('../src/controllers/footer.php');
@@ -33,10 +33,27 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/aboutus.php');
             aboutUs();
         }
+        else if ($page == "Register"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/registerUser.php');
+            registerUser();
+        }
+        else if ($page == "Login"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/login.php');
+            login();
+        }
         else {
             require('../src/controllers/nav.php');
             require('../src/controllers/footer.php');
             require('../src/controllers/home.php');
             home();
         }
+
+    
+}
+if($action = "logout") {
+    require('../src/model/logout.php');
 }
