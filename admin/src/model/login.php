@@ -1,4 +1,6 @@
 <?php
+function loginStmt(){
+$message = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    $username = strip_tags($_POST["username"]);
@@ -8,14 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $stmt->execute();
    $user = $stmt->fetch();
 
-       if(($user['username'] == $username) && (password_verify($password, $user['password'])) ){
+       if($user == true ){
               $_SESSION['username'] = $username;
                header("location: index.php?page=homeAdmin");
        }
        else {
-           echo "<script language='javascript'>";
-           echo "alert('WRONG INFORMATION')";
-           echo "</script>";
-           header("location: login.php");
+
+            $message = "Error : Wrong Informations given. Try Again.";
+            return $message;
        }
+       
    }
+}

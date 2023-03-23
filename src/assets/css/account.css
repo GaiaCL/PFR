@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+body {
+    background-image: url("../images/bgimagebody.webp");
+    
+}
+#navAccount li {
+    background: #193781;
+  
+}
+
+#navAccount li:hover {
+    background: #2652c2;
+    cursor: pointer;
+}
+
+#navAccount li p {
+    color: #DFD100;
+}
+#accountResult {
+    background: #193781;
+}

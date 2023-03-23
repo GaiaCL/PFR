@@ -1,5 +1,5 @@
 <?php
-session_start();    
+session_start();
 if(!isset($_GET['page'])) {
     require('../src/controllers/nav.php');
     require('../src/controllers/footer.php');
@@ -45,6 +45,12 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/login.php');
             login();
         }
+        else if ($page == "Account"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/account.php');
+            account();
+        }
         else {
             require('../src/controllers/nav.php');
             require('../src/controllers/footer.php');
@@ -54,6 +60,13 @@ if(!isset($_GET['page'])) {
 
     
 }
-if($action = "logout") {
-    require('../src/model/logout.php');
+if (!isset($_GET['action'])){
+    
+}
+else {
+ $action = $_GET['action'];
+
+    if($action = "logout") {
+        require('../src/model/logout.php');
+}   
 }

@@ -19,7 +19,7 @@
               <div class="col-6 d-flex flex-column justify-content-center align-items-center p-0">
                   <img src="../src/assets/images/signinUser.webp" alt="Sign In" >
                   <a href="index.php?page=Login"><button type="button" class="btn txtNavTop">
-                  Sign In
+                  Login
                   </button></a>
               </div>
               <?php } else if (isset($_SESSION['username'])){ ?>
@@ -30,8 +30,8 @@
                             <?= $_SESSION['username'] ?>
                         </button>
                         <ul class="dropdown-menu itemMenu mt-2">
-                          <li><a class="dropdown-item itemUser" href="#">My Account</a></li>
-                          <li><a class="dropdown-item itemUser" href="index.php?action=logout">Logout</a></li>
+                          <li><a class="dropdown-item itemUser" href="index.php?page=Account">My Account</a></li>
+                          <li><a class="dropdown-item itemUser" href="../src/model/logout.php">Logout</a></li>
                         </ul>
                     </div>
                   </div>
