@@ -1,11 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
 
-
-body {
-    background-image: url("../images/bgimagebody.webp");
+#welcomingImg {
+    width:35em;
+    position:relative;
+    opacity: 1.0;
+    transition: opacity .55s ease-in-out;
     
 }
+#welcomingImg:hover {
+    
+    opacity: 0.2;
+    transition: opacity 1s ease-in-out;
+}
+#welcomingImg:hover + #homeText {
+    opacity: 1.0;
+    transition: opacity .55s ease-in-out;
+}
+#homeText {
+    z-index: -1;
+    position:absolute;
+    color: wheat;
+    font-size:5em;
+    font-family: 'Playfair Display', serif;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding-bottom: 2em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+
 .carouselPosition {
     display: flex;
     flex-direction: column;
