@@ -5,7 +5,9 @@ function account() {
     $css = "<link href='../src/assets/css/account.css' rel='stylesheet' />";
     $js = "";
     $cssFooter = footer();
-    $cssNav = nav();
+    $navStmt = nav();
+    $cssNav = $navStmt[0];
+    $jsNav = $navStmt[1];
     $accountInfos = accountSelect();
     require('../templates/nav.php'); 
     require('../templates/footer.php');

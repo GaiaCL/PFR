@@ -1,42 +1,104 @@
 
 .box-title {
-    color: #DFD100;
-}
-.box-subtitle {
-    color: #a2a2a2;
-    font-size: 1em;
-}
-.box-subtitle a {
-    color: #DFD100;
-}
-#login {
-    background: #193781;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
-    padding: 3em;
-}
-#loginValidate {
-    width: 10em;
-    border: none;
-    border-radius: 0.5em;
-    padding: 0.5em;
-    background:#DFD100;
-    font-family: 'Merriweather';
-    color: rgb(255, 0, 0);
-    font-weight: bolder; 
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
 
 }
+.box-subtitle {
+    color: #ffffff;
+    font-size: 1em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.box-subtitle a {
+    color: wheat;
+    text-decoration: none;
+    
+}
+.box-subtitle a:hover {
+    color: rgb(129, 116, 93);
+}
+#login {
+    background-image: url('../images/magicboxSignin.webp');
+    margin-top: 5em;
+    box-shadow: 0px 0px 14px 4px #000000;
+    padding: 3em;
+    font-family: 'Playfair Display', serif;
+}
+#loginSuc {
+    background: none;
+    margin-top: 5em;
+    box-shadow: 0px 0px 14px 4px #000000;
+    padding: 3em;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+/* CSS */
+#loginValidate {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Playfair Display', serif;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#loginValidate:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
 #loginValidate:hover {
-    opacity: 0.5;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+#loginValidate:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
 label {
-    color: #DFD100;
+    color: wheat;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
 }
 #returnStore {
-    font-family: 'Merriweather';
+    font-family: 'Playfair Display', serif;
     color: #a2a2a2;
     font-size: 1em;
 }
 #returnStore:hover {
+   color: wheat;
+}
+.loginSuccess {
+    color: white;
+}
+.clickHere{
+    color: wheat;
+}
+.clickHere:hover{
     opacity: 0.5;
 }

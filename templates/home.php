@@ -35,7 +35,11 @@ ob_start(); ?>
         </div>-->
         <div class="row d-flex justify-content-center align-items-center text-center mt-5"  >
             <img src="../src/assets/images/hands.webp" id="welcomingImg">
-            <p id="homeText"> True Magic lies within you...<br> Discover all of our Witchraft supplies ! </p>
+            <?php if(!isset($_SESSION['username'])) {?>
+                <p id="homeText"> True Magic lies within you...<br> Discover all of our Witchraft supplies ! </p>
+            <?php   } else if(isset($_SESSION['username'])){ ?>
+                <p id="homeText"> Welcome<br> <?= $_SESSION['username'] ?> ! </p>
+                <?php   } ?>
         </div>
     </div>
 </div>

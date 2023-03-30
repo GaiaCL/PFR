@@ -1,11 +1,9 @@
-<?php $title ="$cat"; ?>
+<?php $title ="$catNC"; ?>
 <?php ob_start(); ?>
 
 <div class="container-fluid">
     <div class="row p-3" id="titleProducts">
-        <div class="col-4 d-flex justify-content-end align-items-center"><img src="../src/assets/images/sageleft.webp" alt="Sage Left Side"></div>
-        <div class="col-4 d-flex justify-content-center align-items-center"><h1><?= $cat ?></h1></div>
-        <div class="col-4 d-flex justify-content-start align-items-center"><img src="../src/assets/images/sageright.webp" alt="Sage Right Side"></div>
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center"><h1><?= $catNC ?></h1><p><?= $catD ?></p></div>
     </div>
     <div class="row p-4">
         <div class="col-12 d-flex justify-content-evenly align-items-center subCategorie">
@@ -16,14 +14,15 @@
     </div>
     <div class="row d-flex justify-content-evenly">
 
-        <div class="col-9 p-5 d-flex flex-wrap justify-content-evenly" id="productPageLeft">
+       <div class="col-9 p-5 d-flex flex-wrap justify-content-evenly" id="productPageLeft">
             <?php foreach($products as $product) { ?>
-            <div class="card text-center cardProducts mb-5">
+            <div class="card text-left cardProducts mb-5 bg-transparent">
                 <a href="index.php/page=Detail&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture">
                 <div class="card-body">
+                    <i class="fa-solid fa-cart-shopping ms-2 p-2" style="color: #ffffff;float:right;"></i><i class="fa-solid fa-plus p-2" style="color: #ffffff;float:right;"></i>
                     <h3 class="card-title cardTitleProducts"><?=$product['name_products']?></h3>
-                    <p class="card-text mb-2 cardPrice">$<?=$product['price']?></p></a>
-                    <a href="" class="btn buttonBuy mt-2">Buy Now</a>
+                    <p class="card-text  cardPrice">$<?=$product['price']?></p></a>
+                    
                 </div>
             </div>
             <?php }?>
@@ -55,11 +54,8 @@
         </div> 
     </div> 
     <div class="row m-5 p-5" id="moreAbout">
-            <div class="col-4">
-            <h2 class="p-4 mb-4 text-center">More about Incense & Plants</h2>
-            </div>
-            <div class="col-8 d-flex justify-content-center align-items-center">
-                <img src="../src/assets/images/border.webp" alt="Gold Border More Infos">
+            <div class="col-12 text-center">
+            <h2 class="p-4 mb-4">More about Incense & Plants</h2>
             </div>
             <div class="col-12">
             <p class="p-5 text-center">These are the Magic Box scent selections for cleansing, 

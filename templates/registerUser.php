@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-center mb-5">
             <div class="col-5 text-center" id="registration">
-            <h1 class="box-title pb-3">Register New Account</h1>
+            <h1 class="box-title pb-3 mb-5">Register New Account</h1>
                 <form action="" method="post" >
                     
                     <?= $register; ?>

@@ -14,7 +14,7 @@ function loginStmt() {
         
                 if(($user == true)){
                     $_SESSION['username'] = $username;
-                    $fail="<h2 class='text-success fs-4'>Login Success <a href='index.php?page=home' class='text-danger' style='text-decoration:none'>Click here</a> to return to the Homepage.</h2>";
+                    $fail="<h2 class='loginSuccess'>Login Success ! <br> <a href='index.php?page=home' class='clickHere' style='text-decoration:none'>Click here</a> to return to the Homepage.</h2>";
                     return $fail;
                 }
                 else {

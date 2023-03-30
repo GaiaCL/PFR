@@ -2,24 +2,23 @@
 <?php ob_start(); ?>
     <div class="container-fluid">
         <div class="row d-flex justify-content-center mb-5">
-            <div class="col-5 text-center" id="login">
             <?php if(isset($_SESSION['username'])){?>
+                <div class="col-5 text-center" id="loginSuc">
                     <?= $login; ?>
                     <?php } else {?>
-                <h1 class="box-title">Login </h1>
+                <div class="col-5 text-center" id="login">
+                <h1 class="box-title">Sign In</h1>
                 <h2 class="box-subtitle pb-3"> Don't have an account yet ? <a href="index.php?page=Register">Create one here !</a></h2>
                 <form action="" method="post" >
                     <?= $login; ?>
-                    <div class="row py-3 d-flex justify-content-center">
-                        <div class="col-6 form-group">
-                            <label for="exampleInputEmail1" class="pb-1">Username</label>
-                            <input type="text" class="form-control" name="username" placeholder="Username" required />
+                    <div class="row py-3 d-flex justify-content-center mt-5">
+                        <div class="col-8 form-group ">
+                            <label for="exampleInputEmail1" >Username : <input type="text" class="form-control" name="username" placeholder="Username" required /></label>
                         </div>
                     </div>
                     <div class="row py-3 pb-5 d-flex justify-content-center">
-                        <div class="col-6 form-group text-center">
-                            <label for="exampleInputEmail1" class="pb-1">Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password" required />
+                        <div class="col-8 form-group ">
+                            <label for="exampleInputEmail1" >Password : <input type="password" class="form-control" name="password" placeholder="Password" required /></label>
                         </div>
                     </div>
                     <div class="row">
