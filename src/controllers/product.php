@@ -10,9 +10,13 @@ function product() {
     $currentPage = $tabProd[1];
     $pages = $tabProd[2];
     $cat = categorie();
+    $catNC = $cat[0];
+    $catD = $cat[1];
     $subCats = subCategorie();
     $newProducts = newProducts();
-    $cssNav = nav();
+    $navStmt = nav();
+    $cssNav = $navStmt[0];
+    $jsNav = $navStmt[1];
     require('../templates/nav.php'); 
     require('../templates/footer.php');
     require('../templates/product.php');

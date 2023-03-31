@@ -5,7 +5,9 @@ function registerUser() {
     $js='';
     $css = "<link href='../src/assets/css/registerUser.css' rel='stylesheet' />";
     $cssFooter = footer();
-    $cssNav = nav();
+    $navStmt = nav();
+    $cssNav = $navStmt[0];
+    $jsNav = $navStmt[1];
     $registerStmt = registerStmt();
     $pw = $registerStmt[0];
     $register = $registerStmt[1];

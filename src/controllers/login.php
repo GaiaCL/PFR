@@ -5,7 +5,9 @@ function login() {
     $js='';
     $css = "<link href='../src/assets/css/login.css' rel='stylesheet' />";
     $cssFooter = footer();
-    $cssNav = nav();
+    $navStmt = nav();
+    $cssNav = $navStmt[0];
+    $jsNav = $navStmt[1];
     $login = loginStmt();
     require('../templates/nav.php'); 
     require('../templates/footer.php');

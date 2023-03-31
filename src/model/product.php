@@ -21,11 +21,12 @@ function products() {
     return [$products, $currentPage, $pages];
 }
 function categorie(){
-    $stmt = dbConnect()->prepare('SELECT name_categorie as nc FROM categories WHERE id = '.$_GET['id'].'');
+    $stmt = dbConnect()->prepare('SELECT name_categorie as nc, description as d  FROM categories WHERE id = '.$_GET['id'].'');
     $stmt->execute();
     $categorie = $stmt->fetch();
-    $cat = $categorie['nc'];
-    return $cat;
+    $catNC = $categorie['nc'];
+    $catD = $categorie['d'];
+    return [$catNC,$catD];
 }
 
 function subCategorie(){

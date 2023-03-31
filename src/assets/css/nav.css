@@ -8,14 +8,6 @@
     color: wheat;
     text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
 }
-.NavMagicBox {
-    background-color:#201f1f;
-    height: 5em;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-}
 #magicBoxLogo {
     width: 25em;
     filter: drop-shadow(-1px 2px 4px #000);
@@ -27,7 +19,6 @@
     text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
     color: #d2cbcb;
     font-family: 'Playfair Display', serif;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
     border-radius: 0.4em ;
     
 }
@@ -64,4 +55,10 @@
     width:30em;
     border-radius:2em;
     margin-right:1em;
+}
+.bgTrans {
+    background: none;
+}
+.bgDark {
+    background-image: url('../images/background.webp');
 }
