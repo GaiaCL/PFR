@@ -1,11 +1,11 @@
 <?php
 function registerStmt() {
     $pw="";
-    if (isset($_POST['firstname'], $_POST['lastname'], $_POST['username'], $_POST['adress'], $_POST['zipcode'], $_POST['city'], $_POST['mail'], $_POST['phone'], $_POST['password'], $_POST['passwordVerify'])) {
+    if (isset($_POST['firstname'], $_POST['lastname'], $_POST['username_customer'], $_POST['adress'], $_POST['zipcode'], $_POST['city'], $_POST['mail'], $_POST['phone'], $_POST['password'], $_POST['passwordVerify'])) {
         if ($_POST['password'] == $_POST['passwordVerify']){
         $firstname = stripslashes(htmlspecialchars($_POST['firstname']));
         $lastname = stripslashes(htmlspecialchars($_POST['lastname']));
-        $username = stripslashes(htmlspecialchars($_POST['username']));
+        $username = stripslashes(htmlspecialchars($_POST['username_customer']));
         $adress = stripslashes(htmlspecialchars($_POST['adress']));
         $zipcode = stripslashes(htmlspecialchars($_POST['zipcode']));
         $city = stripslashes(htmlspecialchars($_POST['city']));
@@ -13,12 +13,12 @@ function registerStmt() {
         $phone = stripslashes(htmlspecialchars($_POST['phone']));
         $password = stripslashes(htmlspecialchars($_POST['password']));
 
-        $stmt = dbConnect()->prepare("INSERT into `customers` (firstname, lastname, username, adress, zipcode, city, mail, phone, password)
-              VALUES (:firstname, :lastname, :username, :adress, :zipcode, :city, :mail, :phone, :password)");
+        $stmt = dbConnect()->prepare("INSERT into `customers` (firstname, lastname, username_customer, adress, zipcode, city, mail, phone, password)
+              VALUES (:firstname, :lastname, :username_customer, :adress, :zipcode, :city, :mail, :phone, :password)");
 
                 $stmt->bindValue(':firstname', $firstname, PDO::PARAM_STR);
                 $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
-                $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+                $stmt->bindValue(':username_customer', $username, PDO::PARAM_STR);
                 $stmt->bindValue(':adress', $adress, PDO::PARAM_STR);
                 $stmt->bindValue(':zipcode', $zipcode, PDO::PARAM_INT);
                 $stmt->bindValue(':city', $city, PDO::PARAM_STR);
@@ -36,7 +36,7 @@ function registerStmt() {
                 $pw = "Your passwords doesn't match.";
             }
         }
-        else if (!isset($_POST['firstname'], $_POST['lastname'], $_POST['username'], $_POST['adress'], $_POST['zipcode'], $_POST['city'], $_POST['mail'], $_POST['phone'], $_POST['password'], $_POST['passwordVerify'])) {
+        else if (empty($_POST['firstname']) || empty($_POST['lastname']) || empty($_POST['username_customer']) || empty($_POST['adress']) || empty($_POST['zipcode']) || empty($_POST['city']) || empty($_POST['mail']) || empty($_POST['phone']) || empty($_POST['password']) || empty($_POST['passwordVerify'])) {
             if(isset($_POST['submit'])){
             $register = "Complete all the fields.";
             }

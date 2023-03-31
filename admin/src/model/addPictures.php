@@ -10,7 +10,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['d
         if (in_array($extension, $allowedExtensions)) {
     
             move_uploaded_file($_FILES['image']['tmp_name'], '../src/assets/images/' . basename($_FILES['image']['name']));
-            $screenshot = '../src/assets/images/' . basename($_FILES['image']['name']);
+            $screenshot = 'src/assets/images/' . basename($_FILES['image']['name']);
             $description = strip_tags($_POST['description']);
             $name = time();
             $msgSend = "L'envoi a bien été effectué !";

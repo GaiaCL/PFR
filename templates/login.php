@@ -2,7 +2,7 @@
 <?php ob_start(); ?>
     <div class="container-fluid">
         <div class="row d-flex justify-content-center mb-5">
-            <?php if(isset($_SESSION['username'])){?>
+            <?php if(isset($_SESSION['username_customer'])){?>
                 <div class="col-5 text-center" id="loginSuc">
                     <?= $login; ?>
                     <?php } else {?>
@@ -13,12 +13,12 @@
                     <?= $login; ?>
                     <div class="row py-3 d-flex justify-content-center mt-5">
                         <div class="col-8 form-group ">
-                            <label for="exampleInputEmail1" >Username : <input type="text" class="form-control" name="username" placeholder="Username" required /></label>
+                            <label for="exampleInputEmail1" >Username : <input type="text" class="form-control" name="username_customer" placeholder="Username" required /></label>
                         </div>
                     </div>
                     <div class="row py-3 pb-5 d-flex justify-content-center">
                         <div class="col-8 form-group ">
-                            <label for="exampleInputEmail1" >Password : <input type="password" class="form-control" name="password" placeholder="Password" required /></label>
+                            <label for="exampleInputEmail1" >Password : <input type="password" class="form-control" name="password_customer" placeholder="Password" required /></label>
                         </div>
                     </div>
                     <div class="row">

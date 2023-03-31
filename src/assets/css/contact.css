@@ -1,23 +1,20 @@
 
 #titleContact {
-    background: rgb(26, 57, 136);
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    box-shadow: 0px 0px 14px 4px #000000;
 }
 #titleContact h1 {
-    color: #DFD100;
-    font-family: 'Merriweather';
+    color: wheat;
+    font-family: 'Julius Sans One', sans-serif;
     text-transform: uppercase;
     font-size: 5.5em;
     text-align: center;
     text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
 }
-#titleContact img {
-    filter: drop-shadow(0px 0px 6px #000);
-}
+
 #formContact {
-    background: #193781;
-    color: #DFD100;
-    font-family: 'Merriweather';
+    box-shadow: 0px 0px 14px 4px #000000;
+    color: wheat;
+    font-family: 'Playfair Display', serif;
     text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
 
 }
@@ -32,11 +29,52 @@
     border-radius: 0.5em;
     background: rgb(235, 235, 235);
 }
-#formContact input:last-child {
+
+#send {
     width: 10em;
-    background: #DFD100;
-    font-weight: bold;
-}
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Playfair Display', serif;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  #send:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  #send:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  #send:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
 #formContact textarea {
     width: 30em;
     height: 10em;
@@ -47,13 +85,13 @@
     height: 40em;
 }
 #mapSection {
-    background: #193781;
-
+    box-shadow: 0px 0px 14px 4px #000000; 
 }
 #mapSection div:first-child h2 {
-    color:#DFD100;
-    font-family: 'Merriweather';
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.51);
+    color:wheat;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0px 0px 14px 4px #000000;
+
     
 
 }

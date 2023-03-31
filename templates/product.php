@@ -52,26 +52,6 @@
                 </a>
             <?php } ?>
         </div> 
-    </div> 
-    <div class="row m-5 p-5" id="moreAbout">
-            <div class="col-12 text-center">
-            <h2 class="p-4 mb-4">More about Incense & Plants</h2>
-            </div>
-            <div class="col-12">
-            <p class="p-5 text-center">These are the Magic Box scent selections for cleansing, 
-                meditation, divination, spirit work, shadow work, and spellwork. 
-                You are welcome to take what resonates and leave what does not! 
-                Your practice is yours alone, and it is important that you are autonomous 
-                in its execution.
-
-                Using incense in your practice can help you mentally and emotionally prepare 
-                for the work you're doing and adds a ceremonial element that echoes back throughout 
-                human history. It is often incorporated in spellwork as a representative for the element 
-                of air, and customarily burnt as an offering for spirits and deities.
-                Remember, you get to decide what works best for you, so take these recommendations with 
-                a sprinkle of sea salt and stay true to you! Whenever possible though, keep close to nature and burn raw, 
-                dried plant materials or incense made with pure essential oils!</p>
-            </div>
     </div>    
 </div>
 

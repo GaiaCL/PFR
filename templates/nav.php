@@ -11,7 +11,7 @@
               <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Contact"> Contact</a></div>
               <div class="col-2 d-flex justify-content-end align-items-center pe-5">
                 <div class="row d-flex justify-content-evenly align-items-center">
-                  <?php if(!isset($_SESSION['username'])){?>
+                  <?php if(!isset($_SESSION['username_customer'])){?>
                   <div class="col-6">
                       <a href="index.php?page=Login" class="txtNavTop d-flex flex-column align-items-center justify-content-center">
                       <i class="fa-regular fa-moon" style="color: #ffffff;font-size:1.5em;"></i>
@@ -24,12 +24,12 @@
                       <p>0.00$</p>
                     </a>
                   </div>
-                  <?php } else if (isset($_SESSION['username'])){ ?>
+                  <?php } else if (isset($_SESSION['username_customer'])){ ?>
                       <div class="col-6">
                           <div class="nav-item dropdown-center "> 
                             <a class="nav-link dropdown  d-flex flex-column align-items-center justify-content-center txtNavTop" data-bs-toggle="dropdown" href="" id="loginOn">
                                 <i class="fa-solid fa-moon" style="color: #ffffff;font-size:1.5em;"></i>
-                                <p style="color:wheat;"><?= $_SESSION['username'] ?></p>
+                                <p style="color:wheat;"><?= $_SESSION['username_customer'] ?></p>
                             </a>
                             <ul class="dropdown-menu bg-transparent itemMenu mt-2">
                               <li ><a class="dropdown-item itemUser text-center" href="index.php?page=Account">My Account</a></li>

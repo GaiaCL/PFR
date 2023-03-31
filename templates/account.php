@@ -36,7 +36,7 @@
                                         </tr>
                                         <tr>
                                             <td class="p-2">Username</td>
-                                            <td class="p-2 infos"><?= $accountInfo['username'] ?></td>
+                                            <td class="p-2 infos"><?= $accountInfo['username_customer'] ?></td>
                                         </tr>
                                         <tr>
                                             <td class="p-2">Mail</td>
@@ -44,7 +44,7 @@
                                         </tr>
                                         <tr>
                                             <td class="p-2">Phone</td>
-                                            <td class="p-2 infos"><?= substr($accountInfo['phone'],0,1)."******".substr($accountInfo['phone'],(strlen($accountInfo['phone']))-2,2) ?></td>
+                                            <td class="p-2 infos"><?= $accountInfo['phone_code'] ?><?= substr($accountInfo['phone'],0,1)."******".substr($accountInfo['phone'],(strlen($accountInfo['phone']))-2,2) ?></td>
                                         </tr>
                                     </table>
                                     <?php }?>

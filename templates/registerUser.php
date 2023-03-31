@@ -46,7 +46,7 @@
                     <div class="row pb-3 d-flex justify-content-center">
                         <div class="col-4">
                             <label for="exampleInputEmail1" class="pb-1">Username</label>
-                            <input type="text" class="form-control" name="username" placeholder="Username" required />
+                            <input type="text" class="form-control" name="username_customer" placeholder="Username" required />
                         </div>
                     </div>
                     <div class="row pb-5">
