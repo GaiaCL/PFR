@@ -1,6 +1,6 @@
 
 #welcomingImg {
-    width:28em;
+    width:30%;
     position:relative;
     opacity: 1.0;
     transition: opacity .55s ease-in-out;
