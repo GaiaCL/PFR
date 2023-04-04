@@ -8,5 +8,6 @@ function modProducts(){
     $secondMod = $modProducts[1];
     $thirdMod = $modProducts[2];
     $fourthMod = $modProducts[3];
+    $fifthMod = $modProducts[4];
     require('../templates/modificationProducts.php');
 }

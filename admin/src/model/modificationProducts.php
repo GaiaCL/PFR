@@ -1,4 +1,4 @@
-<?php
+à<?php
 function selectSubCat(){
 $sqlQuerySC = 'SELECT * FROM `sub_categories`';
 $SCStatement = dbConnect()->prepare($sqlQuerySC);
@@ -10,7 +10,7 @@ return $SCs;
 function selectModifProducts() {
 if (isset($_GET['id'])){
     $id = intval($_GET['id']);
-    $sql = "SELECT*FROM products WHERE id = :id";
+    $sql = "SELECT*FROM products as p INNER JOIN sub_categories as sc ON p.id_sub_categories = sc.id WHERE p.id = :id";
     $idsStatement = dbConnect()->prepare($sql);
     $idsStatement->bindValue(':id', $id, PDO::PARAM_INT);
     $idsStatement->execute();
@@ -18,6 +18,7 @@ if (isset($_GET['id'])){
     $nameProducts = $res['name_products'];
     $descriptionProducts = $res['description'];
     $priceProducts = $res['price'];
+    $subCategoryProducts = $res['name_sub_categorie'];
     $isEnabled = boolval($res['is_enabled']);
     if (isset($_POST['nameProducts']) && isset($_POST['descProducts']) && isset($_POST['priceProducts']) && isset($_POST['subCategories'])) {
         $nameProductsUpdate = strip_tags($_POST['nameProducts']);
@@ -42,5 +43,5 @@ if (isset($_GET['id'])){
         }
     }
 }
-return [$nameProducts, $descriptionProducts, $priceProducts,$isEnabled];
+return [$nameProducts, $descriptionProducts, $priceProducts,$isEnabled, $subCategoryProducts];
 }

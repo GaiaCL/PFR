@@ -6,10 +6,14 @@ ob_start(); ?>
         <label class="mb-4">Description du Produit : </label><textarea name="descProducts" style="width:30em; height:10em;"><?= $secondMod ?></textarea>
         <label>Prix du Produit : </label><input type=number min=0 max=any step=0.01 name="priceProducts" value ="<?= $thirdMod ?>">
         <select class="form-select m-4" name="subCategories">
-                    <option selected ="true" disabled ='disabled'>Choisissez la Sous-Catégorie</option>
                     <?php
                     foreach($SCs as $SC){
+                        if($fifthMod == $SC['name_sub_categorie']){
+                          echo  "<option selected ='true'>$fifthMod</option>";
+                        } else {
                         echo "<option name='optionSC' value = ".$SC['id'].'>'.$SC['name_sub_categorie'] ."</option>" ;
+                        }
+                        
                     }
                     ?>
                     </select>

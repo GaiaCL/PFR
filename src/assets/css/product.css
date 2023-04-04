@@ -60,6 +60,10 @@
 .cardProducts {
     width: 22em;
 }
+.cardProducts:hover {
+    transform: scale(1.05);
+    transform: translateY(-1em);
+}
 .cardTitleProducts {
     color: wheat;
     font-family: 'Merriweather';
@@ -178,4 +182,12 @@ color: #ffffff;
 .card-body i {
     border: 1px solid white;
     
+}
+.buttonProducts{
+    color: #ffffff;
+    float:right;
+}
+.buttonProducts:hover {
+    color: wheat;
+    border-color: wheat;
 }

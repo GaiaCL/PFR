@@ -17,11 +17,10 @@
        <div class="col-9 p-5 d-flex flex-wrap justify-content-evenly" id="productPageLeft">
             <?php foreach($products as $product) { ?>
             <div class="card text-left cardProducts mb-5 bg-transparent">
-                <a href="index.php/page=Detail&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture">
+                <a href="index.php/page=Detail&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture"></a>
                 <div class="card-body">
-                    <i class="fa-solid fa-cart-shopping ms-2 p-2" style="color: #ffffff;float:right;"></i><i class="fa-solid fa-plus p-2" style="color: #ffffff;float:right;"></i>
-                    <h3 class="card-title cardTitleProducts"><?=$product['name_products']?></h3>
-                    <p class="card-text  cardPrice">$<?=$product['price']?></p></a>
+                <a href=""><i class="fa-solid fa-cart-shopping ms-2 p-2 buttonProducts"></i></a><a href="" ><i class="fa-solid fa-plus p-2 ms-1 buttonProducts"></i></a>                    <h3 class="card-title cardTitleProducts"><?=$product['name_products']?></h3>
+                    <p class="card-text  cardPrice">$<?=$product['price']?></p>
                     
                 </div>
             </div>

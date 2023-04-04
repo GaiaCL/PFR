@@ -11,12 +11,9 @@
 #navAccount li p {
     color: wheat;
 }
-#accountResult {
-    box-shadow: 0px 0px 14px 4px #000000;
 
-}
 .accountBox {
-    box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 14px 4px #000000;
     color: wheat;
 }
 .accountBox h2 {
@@ -24,7 +21,7 @@
 
 }
 table {
-    color: #7c95dd;
+    color: wheat;
     
 }
 .infos {
