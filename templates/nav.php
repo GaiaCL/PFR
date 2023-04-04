@@ -1,17 +1,37 @@
    <?php ob_start(); ?>
     <nav  class="sticky-top bgTrans" id="navMain">
       <div class="container-fluid">
-          <div class="row " >
-              <div class="col-4 d-flex align-items-center ps-5"><a href="index.php?page=Home"> <img id="magicBoxLogo" src="../src/assets/images/magicboxlogotsp.webp" alt="Magic Box Logo"></a></div>
-              <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=2"> Incense & Plant</a></div>
-              <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=3"> Candles & Rituals</a></div>
-              <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=4"> Divination</a></div>
-              <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=5"> Cristals</a></div>
-              <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=6"> Library</a></div>
-              <div class="col-1 d-flex align-items-center"><a class="navBttn d-flex align-items-center justify-content-center" href="index.php?page=Contact"> Contact</a></div>
-              <div class="col-2 d-flex justify-content-end align-items-center pe-5">
-                <div class="row d-flex justify-content-evenly align-items-center">
-                  <?php if(!isset($_SESSION['username_customer'])){?>
+    <a class="navbar-brand ps-5" href="index.php?page=Home">
+      <img id="magicBoxLogo" src="../src/assets/images/magicboxlogotsp.webp" alt="Magic Box Logo" class="img-fluid">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa-solid fa-bars bttnCollapse"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end pe-5 navbarNav" >
+      <ul class="navbar-nav d-flex align-items-center">
+        <li class="nav-item">
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=2">Incense & Plant</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=3">Candles & Rituals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=4">Divination</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=5">Crystals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=6">Library</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end pe-5 navbarNav" >
+      <ul class="navbar-nav d-flex align-items-center">
+        <?php if(!isset($_SESSION['username_customer'])){?>
                   <div class="col-6">
                       <a href="index.php?page=Login" class="txtNavTop d-flex flex-column align-items-center justify-content-center">
                       <i class="fa-regular fa-moon" style="color: #ffffff;font-size:1.5em;"></i>
