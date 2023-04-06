@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+$idCustomer = time();
+if(!isset($_SESSION['ident_customer'])){
+    $_SESSION['ident_customer'] = $idCustomer;
+}
+
 if(!isset($_GET['page'])) {
     require('../src/controllers/nav.php');
     require('../src/controllers/footer.php');
@@ -50,6 +56,12 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/footer.php');   
             require('../src/controllers/account.php');
             account();
+        }
+         else if ($page == "Cart"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/cart.php');
+            cart();
         }
         else {
             require('../src/controllers/nav.php');

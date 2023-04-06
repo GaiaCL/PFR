@@ -9,6 +9,7 @@ function home() {
     $navStmt = nav();
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
+    $cats = $navStmt[2];
     $someProducts = selectSomeProducts();
     $newProducts = selectNewProducts();
     require('../templates/nav.php'); 

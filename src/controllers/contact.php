@@ -8,6 +8,7 @@ function contact() {
     $navStmt = nav();
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
+    $cats = $navStmt[2];
     $msg = receptionContact();
     require('../templates/nav.php'); 
     require('../templates/footer.php');

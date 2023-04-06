@@ -8,6 +8,7 @@ function login() {
     $navStmt = nav();
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
+    $cats = $navStmt[2];
     $login = loginStmt();
     require('../templates/nav.php'); 
     require('../templates/footer.php');

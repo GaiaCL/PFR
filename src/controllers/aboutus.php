@@ -8,6 +8,7 @@ function aboutUS() {
     $navStmt = nav();
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
+    $cats = $navStmt[2];
     require('../templates/nav.php'); 
     require('../templates/footer.php');
     require('../templates/aboutus.php');

@@ -2,7 +2,7 @@
 require('../src/model/product.php');
 
 function product() { 
-    $js='';
+    $js='<script src="../src/assets/JS/products.js"></script>';
     $css = "<link href='../src/assets/css/product.css' rel='stylesheet' />";
     $cssFooter = footer();
     $tabProd = products();
@@ -17,6 +17,7 @@ function product() {
     $navStmt = nav();
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
+    $cats = $navStmt[2];
     require('../templates/nav.php'); 
     require('../templates/footer.php');
     require('../templates/product.php');

@@ -9,10 +9,13 @@ function productSC() {
     $products = $tabProd[0];
     $currentPage = $tabProd[1];
     $pages = $tabProd[2];
-    $subCat = subCategorie();
+    $SC= subCategorie();
+    $subCategorie = $SC[0];
+    $desc = $SC[1];
     $navStmt = nav();
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
+    $cats = $navStmt[2];
     require('../templates/nav.php'); 
     require('../templates/footer.php');
     require('../templates/productSC.php');

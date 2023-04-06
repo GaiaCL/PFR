@@ -9,21 +9,17 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end pe-5 navbarNav" >
       <ul class="navbar-nav d-flex align-items-center">
+        <?php foreach($cats as $cat) {?>
         <li class="nav-item">
-          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=2">Incense & Plant</a>
+          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=<?=$cat['id']?>"><?=$cat['name_categorie']?></a>
+          <div class="dropdown-content">
+            <?php $cat = $cat['id']; ?>
+            <?php foreach(subCategorieNav($cat) as $subCat){ ?>
+              <a href="index.php?page=productSC&id=<?=$subCat['scid']?>"><?= $subCat['scn']?></a>
+              <?php }?>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=3">Candles & Rituals</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=4">Divination</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=5">Crystals</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Product&id=6">Library</a>
-        </li>
+        <?php }?> 
         <li class="nav-item">
           <a class="nav-link navBttn d-flex align-items-center justify-content-center" href="index.php?page=Contact">Contact</a>
         </li>
@@ -39,7 +35,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link txtNavTop d-flex flex-column align-items-center justify-content-center" href="index.php?page=cart">
+          <a class="nav-link txtNavTop d-flex flex-column align-items-center justify-content-center" href="index.php?page=Cart">
             <i class="fa-solid fa-cart-shopping position-relative iconNav"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             0
           </span></i>
@@ -58,7 +54,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link txtNavTop d-flex flex-column align-items-center justify-content-center" href="index.php?page=cart">
+          <a class="nav-link txtNavTop d-flex flex-column align-items-center justify-content-center" href="index.php?page=Cart">
             <i class="fa-solid fa-cart-shopping position-relative iconNav"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             0
           </span></i>
