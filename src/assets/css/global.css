@@ -13,12 +13,11 @@ body {
 html, body {
     height: 100%;
 }
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-.footer, .push {
-    height: 142px; /* .push must be the same height as .footer */
+footer{
+    margin-top: auto;
 }

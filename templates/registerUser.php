@@ -24,13 +24,17 @@
                         </div>
                     </div>
                     <div class="row pb-3">
-                        <div class="col-3 form-group">
+                        <div class="col-4 form-group">
                             <label for="exampleInputEmail1" class="pb-1">Zipcode</label>
                             <input type="text" class="form-control" name="zipcode" placeholder="Zipcode" required />
                         </div>
-                        <div class="col-9 form-group">
+                        <div class="col-4 form-group">
                             <label for="exampleInputEmail1" class="pb-1">City</label>
                             <input type="text" class="form-control" name="city" placeholder="City" required />
+                        </div>
+                        <div class="col-4 form-group">
+                            <label for="exampleInputEmail1" class="pb-1">Country</label>
+                            <input type="text" class="form-control" name="country" placeholder="Country" required />
                         </div>
                     </div>
                     <div class="row pb-5">

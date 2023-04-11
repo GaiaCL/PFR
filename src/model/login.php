@@ -11,8 +11,8 @@ function loginStmt() {
             $stmt->bindValue(":username_customer", $username, PDO::PARAM_STR);
             $stmt->execute();
             $user = $stmt->fetch();
-        
-                if(($user == true)){
+            $passwordVerify = $user['password'];
+                if(($user == true && (password_verify($password, $passwordVerify)))){
                     $_SESSION['username_customer'] = $username;
                     $fail="<h2 class='loginSuccess'>Login Success ! <br> <a href='index.php?page=home' class='clickHere' style='text-decoration:none'>Click here</a> to return to the Homepage.</h2>";
                     return $fail;

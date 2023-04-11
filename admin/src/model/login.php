@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $stmt->bindValue(":username", $username, PDO::PARAM_STR);
    $stmt->execute();
    $user = $stmt->fetch();
-
-       if($user == true ){
+    $passwordVerify = $user['password'];
+       if($user == true && (password_verify($password, $passwordVerify)) ){
               $_SESSION['username'] = $username;
                header("location: index.php?page=homeAdmin");
        }

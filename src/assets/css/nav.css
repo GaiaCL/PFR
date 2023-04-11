@@ -52,6 +52,7 @@
     display: block;
     text-align: center;
     background-color: rgb(245, 222, 179);
+    font-family: 'Playfair Display', serif;
   }
   .dropdown-content a:first-child {
     border-radius: 0.5em 0.5em 0 0;
@@ -80,6 +81,7 @@
 /* Show the dropdown menu on hover */
 .nav-item:hover .dropdown-content {
     display: block;
+    
 }
 
 .itemMenu {

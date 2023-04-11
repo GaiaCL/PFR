@@ -63,6 +63,12 @@ if(!isset($_GET['page'])) {
             require('../src/controllers/cart.php');
             cart();
         }
+        else if ($page == "Update"){
+            require('../src/controllers/nav.php');
+            require('../src/controllers/footer.php');   
+            require('../src/controllers/update.php');
+            update();
+        }
         else {
             require('../src/controllers/nav.php');
             require('../src/controllers/footer.php');
@@ -71,14 +77,4 @@ if(!isset($_GET['page'])) {
         }
 
     
-}
-if (!isset($_GET['action'])){
-    
-}
-else {
- $action = $_GET['action'];
-
-    if($action = "logout") {
-        require('../src/model/logout.php');
-}   
 }
