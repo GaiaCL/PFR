@@ -1,10 +1,10 @@
-.filterBtn{
+.filterBtn {
     align-items: center;
     appearance: none;
     background-color: wheat;
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#000000 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
     box-sizing: border-box;
     color: #36395A;
     cursor: pointer;
@@ -20,107 +20,122 @@
     position: relative;
     text-align: left;
     text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
+    transition: box-shadow .15s, transform .15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow,transform;
+    will-change: box-shadow, transform;
     font-size: 18px;
     font-weight: bold;
-  }
-  
- .filterBtn:focus {
+}
+
+.filterBtn:focus {
     box-shadow: #000000 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
-  }
-  
+}
+
 .filterBtn:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
     transform: translateY(-2px);
     background: wheat;
     color: #36395A;
-  }
+}
+
 .desc {
     color: wheat;
     font-family: 'Playfair Display', serif;
     font-size: 1.2em;
-    border: 1px solid rgba(245, 222, 179,0.2);
+    border: 1px solid rgba(245, 222, 179, 0.2);
     padding: 5em;
     text-align: center;
     border-radius: 0.8em;
     box-shadow: 0px 0px 14px 4px #000000;
-  }
+}
+
 #titleSCProducts {
     box-shadow: 0px 0px 14px 4px #000000;
     margin-bottom: 5em;
-    border-top: 1px solid rgba(245, 222, 179,0.2);
-    border-bottom: 1px solid rgba(245, 222, 179,0.2);
+    border-top: 1px solid rgba(245, 222, 179, 0.2);
+    border-bottom: 1px solid rgba(245, 222, 179, 0.2);
 }
+
 #titleSCProducts h1 {
     color: wheat;
     font-family: 'Julius Sans One', sans-serif;
 
     font-size: 5em;
     font-weight: lighter;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
 }
+
 #productSCPageLeft {
     box-shadow: 0px 0px 14px 4px #000000;
     min-height: 100em;
     border-radius: 0.8em;
-    border: 1px solid rgba(245, 222, 179,0.2);
+    border: 1px solid rgba(245, 222, 179, 0.2);
 }
+
 .cardProducts {
     width: 16em;
+    box-shadow: 0px 0px 14px 4px #000000;
 }
+
 .cardProducts:hover {
     transform: scale(1.05);
     transform: translateY(-1em);
+    box-shadow: 0px 0px 14px 0.2px wheat;
 }
+
 .cardTitleProducts {
     color: wheat;
     font-family: 'Merriweather';
-    font-size:0.9em;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    font-size: 0.9em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
 
 }
+
 .cardPrice {
-    color:#ffffff;
-    font-size:1.5em;
-        text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    color: #ffffff;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
     font-family: 'Merriweather';
 }
+
 #moreAboutSC {
     background: #193781;
     color: #DFD100;
     font-family: 'Merriweather';
     border-radius: 0.5em;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.67);
 }
+
 #moreAboutSC h2 {
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.67);
     font-size: 1.5em;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
 
 }
+
 #moreAboutSC p {
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.67);
     font-size: 1.2em;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
 
 }
+
 #moreAboutSC img {
     opacity: 0.9;
     filter: drop-shadow(0px 0px 6px #000);
 
 }
+
 .pagin {
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
     color: #36395A;
     cursor: pointer;
@@ -136,42 +151,42 @@
     position: relative;
     text-align: left;
     text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
+    transition: box-shadow .15s, transform .15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow,transform;
+    will-change: box-shadow, transform;
     font-size: 18px;
-  }
-  
-  .pagin:focus {
+}
+
+.pagin:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  }
-  
-  .pagin:hover {
+}
+
+.pagin:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
-  }
-  
-  .pagin:active {
+}
+
+.pagin:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
-  }
-  .paginationLi {
-      list-style: none;
-  }
-  .pageItem {
-  color: #ffffff;
-  }
-  .card-body {
-      box-shadow: 0px 0px 14px 4px #000000;
-  
-  }
-  .card-body i {
-      border: 1px solid white;
-      
-  }
+}
+
+.paginationLi {
+    list-style: none;
+}
+
+.pageItem {
+    color: #ffffff;
+}
+
+.card-body i {
+    border: 1px solid white;
+
+}
+
 #ourAdvice {
     background: none;
     color: #ffffff;
@@ -179,28 +194,34 @@
     border-radius: 0.5em;
     box-shadow: 0px 0px 14px 4px #000000;
 }
+
 #titleAdvice {
     box-shadow: 0px 0px 14px 4px #000000;
     font-size: 1.5em;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
 
 }
+
 .advice {
     box-shadow: 0px 0px 14px 4px #000000;
 }
+
 .advice h2 {
     text-align: center;
     margin-bottom: 2em;
-    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139, 38, 209, 0);
 
 }
+
 .advice h3 {
     margin-bottom: 1em;
 }
-.buttonProducts{
+
+.buttonProducts {
     color: #ffffff;
-    float:right;
+    float: right;
 }
+
 .buttonProducts:hover {
     color: wheat;
     border-color: wheat;

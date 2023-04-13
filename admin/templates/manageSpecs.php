@@ -11,10 +11,14 @@
     </thead>
     <tbody>
         <?php
-        foreach($specs as $spec){
-            ?>
+foreach($specs as $spec) {
+    ?>
             <tr>
-            <td><?= $spec['type'] ?></td>
+                <?php if($_GET['page'] == 'manageSpecsColors'){?>
+            <td><?= $spec['type_colors'] ?></td>
+            <?php } else {?>
+                <td><?= $spec['type_size'] ?></td>
+                <?php }?>
             <td><?php if($spec['is_enabled'] == 1){
                             echo "Disponible";
                         } 

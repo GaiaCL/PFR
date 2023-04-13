@@ -10,9 +10,9 @@
                 <h2 class="p-5">Write to us and share your opinion or ask any questions !</h2>
                 <form method="POST" action="#" class="d-flex flex-column justify-content-center align-items-center">
                     <?= $msg ?>
-                    <input type="mail" name="mail" id="mail" placeholder="Mail">
-                    <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                    <input type="mail" name="mail" id="mail" placeholder="Mail" class="mb-3">
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" class="mb-3">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" class="mb-3">
                     <textarea name="question" id="question" placeholder="What's your question ?..."></textarea>
                     <button type="submit" name="send" id="send" class="mt-3">Send</button>
                 </form>

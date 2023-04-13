@@ -1,4 +1,7 @@
 <?php
+
+use Doctrine\DBAL\Types\VarDateTimeImmutableType;
+
 function selectSubCat(){
 $sqlQuery = 'SELECT * FROM `sub_categories`';
 $SCStatement = dbConnect()->prepare($sqlQuery);
@@ -12,12 +15,12 @@ if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts']
     $nameProducts = stripslashes($_POST['nameProducts']);
     $descProducts = stripslashes($_POST['descProducts']);
     $priceProducts = stripslashes($_POST['priceProducts']);
-    $date = CURDATE();
+    $date = 'CURDATE()';
     $isEnabled = boolval($_POST['isEnabled']);
     $identifierProducts = time();
     $idSubCat = strip_tags($_POST['subCategorie']);
     $query = "INSERT into `products` (identifier, name_products, description,price, date_ajout, id_sub_categories, is_enabled)
-          VALUES (:identifier, :name_products, :description, :price, :date_ajout, :id_sub_categories, :is_enabled )";
+          VALUES (:identifier, :name_products, :description, :price, :date_ajout, :id_sub_categories, :is_enabled)";
     $stmt = dbConnect()->prepare($query);
     $stmt->bindValue(':identifier', $identifierProducts, PDO::PARAM_INT);
     $stmt->bindValue(':name_products', $nameProducts, PDO::PARAM_STR);
@@ -42,6 +45,7 @@ function selectProduct($identifier){
     $stmt->bindValue(':identifier', $identifier, PDO::PARAM_INT);
     $stmt->execute();
     $idProduct = $stmt-> fetch();
+    var_dump($identifier);
     return $idProduct[0];   
 }
 function selectSpecsColors() {

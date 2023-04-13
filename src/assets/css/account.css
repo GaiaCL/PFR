@@ -28,9 +28,6 @@
     text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
 
 }
-.accountBox a {
-    color: rgb(182, 180, 180);
-}
 table {
     color: wheat;
     
@@ -41,4 +38,15 @@ table {
 }
 .tableInfos {
     width: 30em;
+}
+.updateBttn {
+    color: wheat;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 2px -7px 2px rgba(139,38,209,0);
+
+}
+.updateBttn:hover{
+    color: rgb(156, 142, 114);
 }

@@ -99,7 +99,7 @@
                 <div class="col-10 accountBox d-flex flex-column justify-content-center pb-3 me-5 mb-5" >
                     <div class="d-flex align-items-center justify-content-between p-4">
                         <h2 class="me-3"> PERSONNAL INFORMATIONS</h2>
-                        <a href="index.php?page=Update&action=updatePersonnal">Update  ></a>
+                        <a href="index.php?page=Update&action=updatePersonnal" class="updateBttn"><i class="fa-solid fa-pen me-2"></i>Update  ></a>
                     </div>
                     <?php foreach($accountInfos as $accountInfo) { ?>
                         <table class="tableInfos">
@@ -123,7 +123,7 @@
                 <div class="col-10 accountBox d-flex flex-column justify-content-center pb-3 me-5 mb-5" >
                     <div class="d-flex align-items-center justify-content-between p-4">
                         <h2 class="me-3"> PASSWORD</h2>
-                        <a href="index.php?page=Update&action=updatePassword">Update ></a>
+                        <a href="index.php?page=Update&action=updatePassword" class="updateBttn"><i class="fa-solid fa-pen me-2"></i>Update ></a>
                     </div>
                         <table class="tableInfos">
                             <tr>
@@ -135,7 +135,7 @@
                 <div class="col-10 accountBox d-flex flex-column justify-content-center pb-3 me-5 mb-5" >
                     <div class="d-flex align-items-center justify-content-between p-4">
                         <h2 class="me-3"> E-MAIL</h2>
-                        <a href="index.php?page=Update&action=updateMail">Update ></a>
+                        <a href="index.php?page=Update&action=updateMail" class="updateBttn"><i class="fa-solid fa-pen me-2"></i>Update ></a>
                     </div>
                     <?php foreach($accountInfos as $accountInfo) { ?>
                         <table class="tableInfos">
@@ -150,7 +150,7 @@
                 <div class="col-10 accountBox d-flex flex-column justify-content-center pb-3 me-5 mb-5" >
                     <div class="d-flex align-items-center justify-content-between p-4">
                         <h2 class="me-3"> PHONE NUMBER</h2>
-                        <a href="index.php?page=Update&action=updatePhone">Update ></a>
+                        <a href="index.php?page=Update&action=updatePhone" class="updateBttn"><i class="fa-solid fa-pen me-2"></i>Update ></a>
                     </div>
                     <?php foreach($accountInfos as $accountInfo) { ?>
                         <table class="tableInfos">
@@ -165,7 +165,7 @@
                 <div class="col-10 accountBox d-flex flex-column justify-content-center pb-3 me-5 mb-5" >
                     <div class="d-flex align-items-center justify-content-between p-4">
                         <h2 class="me-3"> ADRESS</h2>
-                        <a href="index.php?page=Update&action=updateAdress">Update ></a>
+                        <a href="index.php?page=Update&action=updateAdress" class="updateBttn"><i class="fa-solid fa-pen me-2"></i>Update ></a>
                     </div>
                     <?php foreach($accountInfos as $accountInfo) { ?>
                         <table class="tableInfos">

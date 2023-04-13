@@ -34,9 +34,10 @@
             <div class="card text-left cardProducts mb-5 bg-transparent">
                 <a href="index.php/page=Detail&id=<?= $product['id_products']?>" style="text-decoration:none;"><img src="../admin/<?=$product['path']?>" class="card-img-top" alt="Product Picture"></a>
                 <div class="card-body">
-                <form action="../src/controllers/cart.php" method="POST">
-                    <input type="hidden" value="<?= $product['id'] ?>" name="id_product">                   
-                    <button type="submit" style="background:none;border:none;"><i class="fa-solid fa-plus p-2 ms-1 buttonProducts"></i></button>     
+                <form action="../src/controllers/addCart.php" method="POST">
+                    <input type="hidden" value="<?= $product['id'] ?>" name="id_product">  
+                    <input type="hidden" value="<?= $_GET['id'] ?>" name="id_cat">                  
+                    <button type="submit" name="addCart" style="background:none;border:none;"><i class="fa-solid fa-plus p-2 ms-1 buttonProducts"></i></button>     
                 </form>               
                 <h3 class="card-title cardTitleProducts"><?=$product['name_products']?></h3>
                     <p class="card-text  cardPrice">$<?=$product['price']?></p>

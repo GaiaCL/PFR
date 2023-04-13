@@ -1,7 +1,8 @@
 <?php
 require('../src/model/update.php');
 
-function update() {
+function update()
+{
     $css = "<link href='../src/assets/css/update.css' rel='stylesheet' />";
     $js = "";
     $cssFooter = footer();
@@ -9,9 +10,11 @@ function update() {
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
     $cats = $navStmt[2];
-    $accounts = accountSelection();
-    require('../templates/nav.php'); 
+    $accountSelect = accountSelection();
+    $accounts = $accountSelect[0];
+    $msg = $accountSelect[1];
+    $msgPassword = $accountSelect[2];
+    require('../templates/nav.php');
     require('../templates/footer.php');
     require('../templates/update.php');
-    
 }

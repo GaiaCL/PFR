@@ -11,7 +11,7 @@ ob_start();
                     <option selected ="true" disabled ='disabled'>Choisissez la Sous-Catégorie</option>
                     <?php
                     foreach($SCs as $SC){
-                        echo "<option name='subCategorie' value = ".$SC['id'].'>'.$SC['name'] ."</option>" ;
+                        echo "<option name='subCategorie' value = ".$SC['id'].'>'.$SC['name_sub_categorie'] ."</option>" ;
                     }
                     ?>
                     </select>
@@ -20,7 +20,7 @@ ob_start();
                     <div class="d-flex flex-wrap align-items-center justify-content-center">
                     <?php
                     foreach($colors as $color){
-                        echo "<div class='d-flex flex-column flex-wrap align-items-center justify-content-center p-2 m-1' style='border:solid 1px;background-color: ".$color['type'].";color:#9fa2a6;'><input type='checkbox' value=".$color['id']." name ='checkboxColor[]' >".$color['type']."</input></div>" ;
+                        echo "<div class='d-flex flex-column flex-wrap align-items-center justify-content-center p-2 m-1' style='border:solid 1px;background-color: ".$color['type_colors'].";color:#9fa2a6;'><input type='checkbox' value=".$color['id']." name ='checkboxColor[]' >".$color['type_colors']."</input></div>" ;
                     }
                     ?>
                     </div>
@@ -28,7 +28,7 @@ ob_start();
                     <div class="d-flex align-items-center">
                     <?php
                     foreach($sizes as $size){
-                        echo "<input type='checkbox' value=".$size['id']." name ='checkboxSize[]'>".$size['type']."</input>" ;
+                        echo "<input type='checkbox' value=".$size['id']." name ='checkboxSize[]'>".$size['type_size']."</input>" ;
                     }
                     ?>
                     </div>
