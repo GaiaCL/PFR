@@ -9,7 +9,7 @@
                     <option selected ="true" disabled ='disabled'>Choisissez le produit</option>
                     <?php
                     foreach($products as $product){
-                        echo "<option value = ".$product['id'].'>'.$product['name'] ."</option>" ;
+                        echo "<option value = ".$product['id'].'>'.$product['name_products'] ."</option>" ;
                     }
                     ?>
         </select>

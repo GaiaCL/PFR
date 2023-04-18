@@ -9,6 +9,7 @@ function registerUser() {
     $cssNav = $navStmt[0];
     $jsNav = $navStmt[1];
     $cats = $navStmt[2];
+    $jsCount = $navStmt[3];
     $registerStmt = registerStmt();
     $pw = $registerStmt[0];
     $register = $registerStmt[1];
