@@ -16,7 +16,29 @@ function updateCartCount() {
         
     });
 }
+
+function updateCartNav() {
+
+    $.ajax({
+        url: "../src/assets/AJAX/cartTotal.php",
+        type: "GET",
+        data: {
+            action: "get_total_nav"
+        },
+        dataType: "json",
+        success: function(response) {
+           
+            const cartBadgeNavOne = document.getElementById("priceNavOne");
+            const cartBadgeNavTwo = document.getElementById("priceNavTwo");
+            cartBadgeNavOne.innerHTML = "$" + response;
+            cartBadgeNavTwo.innerHTML = "$" + response;
+           
+        },
+        
+    });
+}
+
 window.onload = function() {
     updateCartCount();
-
-};
+    updateCartNav();
+}

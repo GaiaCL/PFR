@@ -36,6 +36,7 @@
                 <div class="card-body">
                 <form action="../src/controllers/addCart.php" method="POST">
                     <input type="hidden" value="<?= $product['id_products'] ?>" name="id_product">  
+                    <input type="hidden" value="<?= $_GET['page'] ?>" name="page">     
                     <input type="hidden" value="<?= $_GET['id'] ?>" name="id_cat">                  
                     <button type="submit" name="addCart" style="background:none;border:none;"><i class="fa-solid fa-plus p-2 ms-1 buttonProducts"></i></button>     
                 </form>               

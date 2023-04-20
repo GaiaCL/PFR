@@ -12,8 +12,10 @@ function loginStmt() {
             $stmt->execute();
             $user = $stmt->fetch();
             $passwordVerify = $user['password'];
+            $email_customer = $user['mail'];
                 if(($user == true && (password_verify($password, $passwordVerify)))){
                     $_SESSION['username_customer'] = $username;
+                    $_SESSION['mail'] = $email_customer;
                     $fail="<h2 class='loginSuccess'>Login Success ! <br> <a href='index.php?page=home' class='clickHere' style='text-decoration:none'>Click here</a> to return to the Homepage.</h2>";
                     return $fail;
                 }
