@@ -8,7 +8,6 @@ $SCs = $SCStatement->fetchAll();
 return $SCs;
 }
 function insertProducts(){
-$stmt="";
 if (isset($_POST['nameProducts'],$_POST['descProducts'], $_POST['priceProducts'], $_POST['subCategorie'], $_POST['isEnabled'])) {
     $nameProducts = stripslashes($_POST['nameProducts']);
     $descProducts = stripslashes($_POST['descProducts']);

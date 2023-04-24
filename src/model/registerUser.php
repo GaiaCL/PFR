@@ -1,13 +1,14 @@
 <?php
 function registerStmt() {
     $pw="";
-    if (isset($_POST['firstname'], $_POST['lastname'], $_POST['username_customer'], $_POST['adress'], $_POST['zipcode'], $_POST['city'], $_POST['country'], $_POST['mail'], $_POST['phone'], $_POST['password'], $_POST['passwordVerify'])) {
+    if (isset($_POST['firstname'], $_POST['lastname'], $_POST['username_customer'], $_POST['adress'], 
+    $_POST['zipcode'], $_POST['city'], $_POST['country'], $_POST['mail'], $_POST['phone'], $_POST['password'], $_POST['passwordVerify'])) {
         if ($_POST['password'] == $_POST['passwordVerify']){
         $firstname = stripslashes(htmlspecialchars($_POST['firstname']));
         $lastname = stripslashes(htmlspecialchars($_POST['lastname']));
         $username = stripslashes(htmlspecialchars($_POST['username_customer']));
         $adress = stripslashes(htmlspecialchars($_POST['adress']));
-        $zipcode = stripslashes(htmlspecialchars($_POST['zipcode']));
+        $zipcode = stripslashes(htmlspecialchars($_POST['zipcode']));-
         $city = stripslashes(htmlspecialchars($_POST['city']));
         $country = stripslashes(htmlspecialchars($_POST['country']));
         $mail = stripslashes(htmlspecialchars($_POST['mail']));
@@ -38,7 +39,9 @@ function registerStmt() {
                 $pw = "Your passwords doesn't match.";
             }
         }
-        else if (empty($_POST['firstname']) || empty($_POST['lastname']) || empty($_POST['username_customer']) || empty($_POST['adress']) || empty($_POST['zipcode']) || empty($_POST['city']) || empty($_POST['country']) || empty($_POST['mail']) || empty($_POST['phone']) || empty($_POST['password']) || empty($_POST['passwordVerify'])) {
+        else if (empty($_POST['firstname']) || empty($_POST['lastname']) || empty($_POST['username_customer']) 
+        || empty($_POST['adress']) || empty($_POST['zipcode']) || empty($_POST['city']) || empty($_POST['country']) 
+        || empty($_POST['mail']) || empty($_POST['phone']) || empty($_POST['password']) || empty($_POST['passwordVerify'])) {
             if(isset($_POST['submit'])){
             $register = "Complete all the fields.";
             }

@@ -106,6 +106,10 @@ if(!isset($_SESSION['username'])){
     require('../src/controllers/modificationSpecs.php');
     modifSizesSpecs();
     }
+    else if($page == 'answerContact'){
+        require('../src/controllers/answerContact.php');
+        answerContact();
+        }
     else if($page == 'contact'){
         require('../src/controllers/contact.php');
         contact();

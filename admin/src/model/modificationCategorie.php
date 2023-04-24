@@ -10,8 +10,8 @@ if (isset($_GET['id'])){
     $nomCat = $res['name_categorie'];
     $descriptionCat = $res['description'];
     if (isset($_POST['nomCat']) && isset($_POST['descCat'])) {
-        $nomUpdate = $_POST['nomCat'];
-        $descriptionUpdate = $_POST['descCat']; 
+        $nomUpdate = strip_tags($_POST['nomCat']);
+        $descriptionUpdate = strip_tags($_POST['descCat']); 
         if(isset($_POST['valider'])){
             $query = 'UPDATE categories SET name_categorie = :name_categorie, description = :description WHERE id = :id';
             $idsStatement = dbConnect()->prepare($query);

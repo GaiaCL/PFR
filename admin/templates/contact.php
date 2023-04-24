@@ -19,7 +19,6 @@
             <td><?=$contact['mail']?></td> 
             <td><?=$contact['question']?></td>               
             <td class="text-center">  
-                <div class="mb-3 mt-1"><a href="index.php?page=modificationContact&id=<?php echo $contact['id']?>" style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Modifier</a></div> 
                 <div><a href="index.php?page=answerContact&id= <?php echo $contact['id']?>"  style="background-color:black;padding:0.3em;color:white;border-radius:0.5em;">Repondre</a></div>
             </td>
             </tr>
