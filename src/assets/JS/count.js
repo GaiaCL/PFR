@@ -29,7 +29,6 @@ function updateCartNav() {
         success: function(response) {
            
             const cartBadgeNavOne = document.getElementById("priceNavOne");
-            const cartBadgeNavTwo = document.getElementById("priceNavTwo");
             cartBadgeNavOne.innerHTML = "$" + response;
             cartBadgeNavTwo.innerHTML = "$" + response;
            

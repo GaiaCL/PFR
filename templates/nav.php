@@ -58,7 +58,7 @@
                  <i class="fa-solid fa-cart-shopping position-relative iconNav"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">
                      0
                    </span></i>
-                 <p id="priceNavTwo">0.00$</p>
+                 <p id="priceNavOne">0.00$</p>
                </a>
              </li>
            <?php } ?>
